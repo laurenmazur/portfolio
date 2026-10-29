@@ -6,7 +6,7 @@
 
   <!-- EDIT: the title shows in the browser tab and in Google results -->
   <title>Lauren Mazur | Portfolio</title>
-  <meta name="description" content="Strategy, creative work, events and CV of Lauren Mazur.">
+  <meta name="description" content="Strategy, creative work, branding and CV of Lauren Mazur.">
 
   <!-- Fonts from Google Fonts (free): Inter Tight for everything -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,13 +34,13 @@
         <p class="clock" aria-hidden="true"><span id="date"></span><br><span id="time"></span></p>
       </div>
 
-      <!-- Top right: the coloured sticker buttons -->
+      <!-- Top right: the pill menu (hover or tab to a link to highlight it) -->
       <nav class="stage__nav" aria-label="Main">
-        <a class="sticker sticker--pink"   href="#work">Work</a>
-        <a class="sticker sticker--sky"    href="#events">Events</a>
-        <a class="sticker sticker--butter" href="#youtube">YouTube</a>
-        <a class="sticker sticker--mint"   href="#cv">CV</a>
-        <a class="sticker sticker--violet" href="#contact">Contact</a>
+        <a class="pill-nav__link" href="#work">Work</a>
+        <a class="pill-nav__link" href="#branding">Branding</a>
+        <a class="pill-nav__link" href="#youtube">YouTube</a>
+        <a class="pill-nav__link" href="#cv">CV</a>
+        <a class="pill-nav__link" href="#contact">Contact</a>
       </nav>
 
       <!-- The handwritten notes either side of the portrait -->
@@ -77,12 +77,18 @@
 
         <h2 class="hand-title doodle-host">about me<span class="doodle doodle--burst" aria-hidden="true"></span></h2>
         <!-- EDIT: check this reads like you -->
-        <p>I was born in the US and grew up in Scottsdale, Arizona, before moving to Cork, Ireland,
-           where I did secondary school and college. After graduating I moved to Dublin to work with
-           Accenture, where I stayed for three years, before deciding to take a bite out of the
-           Big Apple. Now I'm a Senior Consultant at CrossCountry Consulting in New York, working with
-           senior business and technology leaders on large transformation programmes. Outside of work
-           I run, compete in HYROX, film for my YouTube channel and organise events.</p>
+        <p>Born in Boston and raised in Scottsdale, Arizona, I moved to Cork, Ireland, for school and
+           university before heading to Dublin to start my career at Accenture. Three years later,
+           I traded Dublin for New York and took a bite out of the Big Apple. I'm now a Senior
+           Consultant at CrossCountry Consulting, working with asset management clients to implement
+           new technologies and platforms.</p>
+
+        <p>Outside of work, I'm usually running, training at The Yard Gym, hunting down an iced
+           latte, walking someone else's dog, reading, scrolling Pinterest or filming and editing
+           videos to feed my creative side. I'm a people person who thrives on being around others,
+           bringing people together and always having something on the go. Add in some stereotypical
+           eldest-daughter energy, Type A tendencies and an overambitious to-do list, and I'm pretty
+           much in my element.</p>
 
         <figure class="journey">
           <svg viewBox="0 0 640 260" role="img" aria-label="Hand-drawn map: Scottsdale, Arizona to Cork, then Dublin in Ireland, then New York">
@@ -121,13 +127,14 @@
           <li>Salesforce</li>
           <li>AWS Cloud</li>
           <li>Figma</li>
+          <li>GitHub</li>
         </ul>
 
         <h2 class="hand-title hand-title--oval doodle-host">contents<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
         <!-- These link to the sections further down the page -->
         <ol class="contents">
           <li><a href="#work"><span class="contents__n">01.</span>work</a></li>
-          <li><a href="#events"><span class="contents__n">02.</span>events</a></li>
+          <li><a href="#branding"><span class="contents__n">02.</span>branding</a></li>
           <li><a href="#youtube"><span class="contents__n">03.</span>youtube</a></li>
           <li><a href="#cv"><span class="contents__n">04.</span>cv</a></li>
           <li><a href="#contact"><span class="contents__n">05.</span>say hi!</a></li>
@@ -179,36 +186,36 @@
     </section>
 
     <!-- ==================================================
-         EVENTS (space for the events you've organised)
+         BRANDING (space for your branding projects)
          ================================================== -->
-    <section id="events" class="section">
-      <h2 class="hand-title hand-title--big hand-title--oval doodle-host">events<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
+    <section id="branding" class="section">
+      <h2 class="hand-title hand-title--big hand-title--oval doodle-host">branding<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
 
-      <!-- EDIT: a few lines on the events you organise and why you love it -->
-      <p class="section__intro">Add a few lines here about the events you've organised and what you
-         enjoy about bringing people together.</p>
+      <!-- EDIT: a few lines on your branding work -->
+      <p class="section__intro">Add a few lines here about your branding work: the brands you've
+         worked with and what you did for them.</p>
 
       <div class="work-grid">
-        <!-- EDIT each tile: event name, a sentence on what it was, the year, and a link if there is one.
+        <!-- EDIT each tile: brand name, a sentence on what you did, the year, and a link if there is one.
              Copy a whole tile to add more. Add photos the same way as in the Work section. -->
         <a class="tile tile--4 tile--sky" href="#">
-          <div class="tile__media">Replace with a photo</div>
-          <h3 class="tile__title">Event name</h3>
-          <p class="tile__text">One sentence: what it was, who came, what you organised.</p>
+          <div class="tile__media">Replace with an image</div>
+          <h3 class="tile__title">Brand name</h3>
+          <p class="tile__text">One sentence on the brand and what you did for it.</p>
           <p class="tile__year">2026</p>
         </a>
 
         <a class="tile tile--4 tile--butter" href="#">
-          <div class="tile__media">Replace with a photo</div>
-          <h3 class="tile__title">Event name</h3>
-          <p class="tile__text">One sentence: what it was, who came, what you organised.</p>
+          <div class="tile__media">Replace with an image</div>
+          <h3 class="tile__title">Brand name</h3>
+          <p class="tile__text">One sentence on the brand and what you did for it.</p>
           <p class="tile__year">2025</p>
         </a>
 
         <a class="tile tile--4 tile--pink" href="#">
-          <div class="tile__media">Replace with a photo</div>
-          <h3 class="tile__title">Event name</h3>
-          <p class="tile__text">One sentence: what it was, who came, what you organised.</p>
+          <div class="tile__media">Replace with an image</div>
+          <h3 class="tile__title">Brand name</h3>
+          <p class="tile__text">One sentence on the brand and what you did for it.</p>
           <p class="tile__year">2025</p>
         </a>
       </div>
@@ -226,7 +233,7 @@
       </div>
 
       <!-- EDIT: a line or two on what your channel is about -->
-      <p class="section__intro">Add a line or two about what your channel is about and how often you post.</p>
+      <p class="section__intro">I film and edit videos to feed my creative side. Here's the latest.</p>
 
       <!-- Shows your latest uploads in one player (it lets viewers skip through your videos).
            To show one specific video instead, use:
@@ -237,9 +244,11 @@
           <iframe src="https://www.youtube.com/embed/videoseries?list=UUQfGIuvLhqQfSs390sJ_-EA"
                   title="Lauren Mazur on YouTube" loading="lazy"
                   allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
+                  referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen></iframe>
         </div>
       </div>
+      <p class="video-fallback">Video not showing? <a href="https://www.youtube.com/@laurenmzr">Watch on YouTube</a>.</p>
     </section>
 
     <!-- ==================================================
@@ -255,7 +264,7 @@
 
         <div class="cv2">
 
-          <!-- Top: name and role on the left, a small framed portrait on the right -->
+          <!-- Top: name and role on the left, a small framed photo on the right -->
           <div class="cv2__top">
             <div>
               <p class="cv2__name">Lauren Mazur</p>
@@ -271,45 +280,37 @@
 
           <div class="cv2__cols">
 
-            <!-- LEFT column: the quick facts -->
+            <!-- LEFT column -->
             <div class="cv2__left">
               <div>
                 <h3 class="cv2__h">about me</h3>
-                <p>Strategy and operations consultant working with senior business and technology
-                   leaders on large transformation programmes. Based in New York, with a soft spot
-                   for consumer brands and creative strategy.</p>
+                <p>Strategy and operations consultant by day, creative project enthusiast by night.
+                   I work with asset management clients to bring new technologies and platforms to life.
+                   Based in NYC, with a soft spot for consumer brands, creative strategy and turning
+                   ideas into action.</p>
               </div>
 
               <div>
-                <h3 class="cv2__h">skills</h3>
-                <ul class="plain">
-                  <li>Enterprise transformation</li>
-                  <li>Operational &amp; implementation strategy</li>
-                  <li>Go-to-market &amp; business development</li>
-                  <li>Executive reporting &amp; forecasting</li>
-                  <li>Governance &amp; KPI frameworks</li>
-                  <li>Stakeholder management</li>
+                <h3 class="cv2__h">things i'm good at</h3>
+                <ul class="plain good">
+                  <li>Making complex things make sense</li>
+                  <li>Strategy &amp; getting things done</li>
+                  <li>Bringing people and ideas together</li>
+                  <li>Turning data into decisions</li>
+                  <li>Building things from the ground up</li>
+                  <li>Organising (it's the eldest daughter in me)</li>
                 </ul>
               </div>
 
               <div>
-                <h3 class="cv2__h">software i use</h3>
-                <ul class="plain">
-                  <li>Excel / Google Sheets</li>
-                  <li>SQL</li>
-                  <li>Salesforce</li>
-                  <li>AWS Cloud</li>
-                  <li>Figma</li>
-                </ul>
+                <h3 class="cv2__h">tools of the trade</h3>
+                <p>Excel &amp; Google Sheets · SQL · Salesforce · AWS Cloud · Figma · GitHub</p>
               </div>
 
               <div>
                 <h3 class="cv2__h">languages</h3>
-                <ul class="plain langs">
-                  <li><span>Spanish</span><span class="plus" aria-label="Intermediate">+++</span></li>
-                  <li><span>French</span><span class="plus" aria-label="Intermediate">+++</span></li>
-                  <li><span>Polish</span><span class="plus" aria-label="Elementary">+</span></li>
-                </ul>
+                <p>Spanish · French · Polish</p>
+                <p class="cv2__note">Still working on all three.</p>
               </div>
 
               <div>
@@ -318,8 +319,6 @@
                   <li>Running (3 half marathons, 1 marathon)</li>
                   <li>Next up: Philadelphia Marathon (Nov 2026), NYC Marathon (Nov 2027 and Nov 2028)</li>
                   <li>HYROX (4 competitions), including Valencia and Málaga in doubles (March 2024)</li>
-                  <li>Consumer technology</li>
-                  <li>Organising events</li>
                 </ul>
               </div>
 
@@ -330,44 +329,54 @@
               </div>
             </div>
 
-            <!-- RIGHT column: experience and education, right-aligned.
+            <!-- RIGHT column: the work stuff and the academic stuff.
                  To swap a company name for its logo, see the note in style.css ("LOGO DOODLES"). -->
             <div class="cv2__right">
               <div>
-                <h3 class="cv2__h">my experience</h3>
+                <h3 class="cv2__h">the work stuff</h3>
 
                 <article class="xp">
                   <h4 class="xp__role">Senior Consultant, Business Transformation</h4>
-                  <p class="xp__where"><span class="company">CrossCountry Consulting<span class="doodle doodle--oval" aria-hidden="true"></span></span> | Sept 2025 – Present</p>
-                  <p class="xp__text">Leading operational and implementation strategy for a
-                    <span class="circled">$25M<span class="doodle doodle--oval" aria-hidden="true"></span></span>
-                    technology transformation, and building an AI-powered insights dashboard that
-                    contributed to $2M+ in pipeline.</p>
+                  <p class="xp__where"><span class="company">CrossCountry Consulting<span class="doodle doodle--oval" aria-hidden="true"></span></span> · Sept 2025–Present</p>
+                  <p class="xp__text">Helping asset management clients navigate the world of enterprise technology and transformation.</p>
+                  <ul class="cv-list">
+                    <li>Working on a <span class="circled">$25M<span class="doodle doodle--oval" aria-hidden="true"></span></span> technology transformation supporting 10,000+ users.</li>
+                    <li>Building an AI-powered insights dashboard to identify growth opportunities and track commercial performance.</li>
+                    <li>Supporting business development and helping turn ideas into new opportunities.</li>
+                  </ul>
                 </article>
 
                 <article class="xp">
                   <h4 class="xp__role">Brand Strategy &amp; Operations</h4>
-                  <p class="xp__where"><span class="company">Chilled Bean Co<span class="doodle doodle--underline" aria-hidden="true"></span></span> | Oct 2024 – Present</p>
-                  <p class="xp__text">Go-to-market, customer acquisition and market analysis for an
-                    early-stage consumer brand.</p>
+                  <p class="xp__where"><span class="company">Chilled Bean Co<span class="doodle doodle--underline" aria-hidden="true"></span></span> · Oct 2024–Present</p>
+                  <p class="xp__text">A creative side project bringing together my love of consumer brands, coffee and building things.</p>
+                  <ul class="cv-list">
+                    <li>Working on go-to-market strategy, customer acquisition and market analysis.</li>
+                    <li>Exploring ways to grow the brand, connect with customers and bring new ideas to life.</li>
+                  </ul>
                 </article>
 
                 <article class="xp">
                   <h4 class="xp__role">Strategy &amp; Operations Specialist</h4>
-                  <p class="xp__where"><span class="company">Accenture<span class="doodle doodle--burst" aria-hidden="true"></span></span> | July 2022 – Aug 2025</p>
-                  <p class="xp__text">Led operations for a policy transformation across 26 product areas
-                    and 30+ stakeholders, and turned
-                    <span class="circled">400+<span class="doodle doodle--oval" aria-hidden="true"></span></span>
-                    requirements into recommendations for an infrastructure redesign.</p>
-                  <p class="xp__award"><span class="award__star" aria-hidden="true">★</span> Delivery Star Award</p>
+                  <p class="xp__where"><span class="company">Accenture<span class="doodle doodle--burst" aria-hidden="true"></span></span> · Dublin · Jul 2022–Aug 2025</p>
+                  <p class="xp__text">Three years working at the intersection of business, technology and operations for a global technology client.</p>
+                  <ul class="cv-list">
+                    <li>Helped lead a policy transformation spanning 26 product areas and 30+ stakeholders.</li>
+                    <li>Turned <span class="circled">400+<span class="doodle doodle--oval" aria-hidden="true"></span></span> business and technical requirements into recommendations for infrastructure redesign.</li>
+                    <li>Built reporting, forecasting and governance frameworks to help teams make better decisions.</li>
+                  </ul>
+                  <p class="xp__text xp__extra"><strong>A little extra:</strong> Community Lead for Accenture's graduate programme,
+                    helping welcome 60+ new graduates each year through orientation, events and integration.
+                    Basically, making sure everyone felt at home while putting my love of organising things to good use.</p>
+                  <p class="xp__award"><span class="award__star" aria-hidden="true">★</span> Accenture Delivery Star Award</p>
                 </article>
               </div>
 
               <div>
-                <h3 class="cv2__h">education</h3>
+                <h3 class="cv2__h">the academic stuff</h3>
                 <article class="xp">
-                  <h4 class="xp__role">Bachelor of Commerce, Banking &amp; Finance</h4>
-                  <p class="xp__where"><span class="company">University College Cork<span class="doodle doodle--squiggle" aria-hidden="true"></span></span> | May 2022</p>
+                  <h4 class="xp__role">Bachelor of Commerce · Banking &amp; Finance</h4>
+                  <p class="xp__where"><span class="company">University College Cork<span class="doodle doodle--squiggle" aria-hidden="true"></span></span> · May 2022</p>
                 </article>
               </div>
             </div>
