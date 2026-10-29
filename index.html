@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- EDIT: the title shows in the browser tab and in Google results -->
-  <title>Lauren | Portfolio</title>
-  <meta name="description" content="Creative work and CV of Lauren.">
+  <title>Lauren Mazur | Portfolio</title>
+  <meta name="description" content="Strategy, creative work, events and CV of Lauren Mazur.">
 
   <!-- Fonts from Google Fonts (free): Gochi Hand for the handwriting, Archivo for everything else -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +20,13 @@
   <a class="skip" href="#work">Skip to work</a>
 
   <!-- ==================================================
-       HERO: cobalt frame, portrait in the middle,
-       words and stars dotted around it
+       HERO: portrait in the middle, words and stars dotted around it
        ================================================== -->
   <header class="hero" id="top">
     <div class="stage">
 
       <!-- Top left: your name and a live date and time (script.js fills these in) -->
       <div class="stage__logo">
-        <!-- EDIT: your name -->
         <h1 class="logo"><a href="#top">Lauren</a></h1>
         <p class="clock" aria-hidden="true"><span id="date"></span><br><span id="time"></span></p>
       </div>
@@ -36,26 +34,27 @@
       <!-- Top right: the coloured sticker buttons -->
       <nav class="stage__nav" aria-label="Main">
         <a class="sticker sticker--pink"   href="#work">Work</a>
-        <a class="sticker sticker--sky"    href="#about">About</a>
-        <a class="sticker sticker--butter" href="#cv">CV</a>
-        <a class="sticker sticker--mint"   href="#contact">Contact</a>
+        <a class="sticker sticker--sky"    href="#events">Events</a>
+        <a class="sticker sticker--butter" href="#youtube">YouTube</a>
+        <a class="sticker sticker--mint"   href="#cv">CV</a>
+        <a class="sticker sticker--violet" href="#contact">Contact</a>
       </nav>
 
-      <!-- EDIT: the handwritten notes either side of the portrait -->
+      <!-- The handwritten notes either side of the portrait -->
       <p class="note note--left">hi! i'm a…</p>
-      <p class="note note--right">living and working in your city</p>
+      <p class="note note--right">living and working in New York</p>
 
-      <!-- EDIT: the five words dotted around you. Change the text, keep the star. -->
+      <!-- The five words dotted around you. Change the text, keep the star. -->
       <ul class="tags">
-        <li class="tag tag--1"><span>Creator</span><span class="tag__star" aria-hidden="true">★</span></li>
-        <li class="tag tag--2"><span>Designer</span><span class="tag__star" aria-hidden="true">★</span></li>
-        <li class="tag tag--3"><span>Illustrator</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--1"><span>Strategist</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--2"><span>Creative</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--3"><span>Human</span><span class="tag__star" aria-hidden="true">★</span></li>
         <li class="tag tag--4"><span>Storyteller</span><span class="tag__star" aria-hidden="true">★</span></li>
-        <li class="tag tag--5"><span>Human</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--5"><span>Connector</span><span class="tag__star" aria-hidden="true">★</span></li>
       </ul>
 
-      <!-- Your drawing, as white lines on the cobalt -->
-      <img class="stage__portrait" src="portrait-white.png" width="1122" height="1402"
+      <!-- Your drawing, in cobalt lines on white -->
+      <img class="stage__portrait" src="portrait-cobalt.png" width="1122" height="1402"
            alt="Line drawing portrait of Lauren, laughing">
     </div>
   </header>
@@ -63,52 +62,56 @@
   <main>
 
     <!-- ==================================================
-         ABOUT: drawing on the left, handwritten headings on the right
+         ABOUT: second drawing on the left, handwritten headings on the right
          ================================================== -->
     <section id="about" class="section about">
       <figure class="about__portrait">
-        <img src="portrait-black.png" width="1122" height="1402"
-             alt="Line drawing portrait of Lauren, laughing">
+        <img src="portrait-about.png" width="1122" height="1402"
+             alt="Line drawing portrait of Lauren with long hair, hoop earrings and an L necklace">
       </figure>
 
       <div class="about__text">
 
         <h2 class="hand-title">about me</h2>
-        <!-- EDIT: a short paragraph about you -->
-        <p>I'm Lauren. Write three or four sentences here: where you studied or trained,
-           what you enjoy making, how you like to work, and what you want to do next.</p>
+        <!-- EDIT: check this reads like you -->
+        <p>I'm Lauren, a strategy and operations consultant based in New York. I work with
+           senior business and technology leaders on large transformation programmes, from
+           operating models and rollout strategy to executive reporting and forecasting.
+           I studied Banking &amp; Finance at University College Cork, spent three years at
+           Accenture in Dublin, and now work as a Senior Consultant at CrossCountry Consulting.
+           Outside of work I run, compete in HYROX, film for my YouTube channel and organise events.</p>
 
         <h2 class="hand-title">what i do</h2>
-        <!-- EDIT: a few lines on the work you're proudest of -->
-        <p>Write a few lines about the projects, jobs or collaborations you want people
-           to notice. Keep it specific: what you made, who it was for, what happened.</p>
+        <p>Right now I lead operational and implementation strategy for a $25M enterprise
+           technology transformation, and I built an AI-powered dashboard that tracks growth
+           opportunities and business development performance. I also support go-to-market
+           and growth for an early-stage consumer brand, and I'm happiest where strategy meets
+           something creative.</p>
 
         <h2 class="hand-title">tools</h2>
-        <!-- EDIT: the tools or software you use -->
         <ul class="tools">
-          <li>Tool one</li>
-          <li>Tool two</li>
-          <li>Tool three</li>
-          <li>Tool four</li>
-          <li>Tool five</li>
-          <li>Tool six</li>
+          <li>Excel</li>
+          <li>Google Sheets</li>
+          <li>SQL</li>
+          <li>Salesforce</li>
+          <li>AWS Cloud</li>
+          <li>Figma</li>
         </ul>
 
         <h2 class="hand-title">contents</h2>
-        <!-- EDIT: these link to the tiles in the Work section below.
-             Change the words to match your project titles. -->
+        <!-- These link to the sections further down the page -->
         <ol class="contents">
-          <li><a href="#project-1"><span class="contents__n">01.</span>project one</a></li>
-          <li><a href="#project-2"><span class="contents__n">02.</span>project two</a></li>
-          <li><a href="#project-3"><span class="contents__n">03.</span>project three</a></li>
-          <li><a href="#project-4"><span class="contents__n">04.</span>project four</a></li>
-          <li><a href="#project-5"><span class="contents__n">05.</span>project five</a></li>
+          <li><a href="#work"><span class="contents__n">01.</span>work</a></li>
+          <li><a href="#events"><span class="contents__n">02.</span>events</a></li>
+          <li><a href="#youtube"><span class="contents__n">03.</span>youtube</a></li>
+          <li><a href="#cv"><span class="contents__n">04.</span>cv</a></li>
+          <li><a href="#contact"><span class="contents__n">05.</span>say hello</a></li>
         </ol>
       </div>
     </section>
 
     <!-- ==================================================
-         WORK
+         WORK (creative projects)
          ================================================== -->
     <section id="work" class="section">
       <h2 class="hand-title hand-title--big">work</h2>
@@ -147,13 +150,65 @@
           <p class="tile__year">2024</p>
         </a>
 
-        <a id="project-5" class="tile tile--12 tile--sky" href="#">
-          <div class="tile__media tile__media--wide">Replace with an image</div>
-          <h3 class="tile__title">Project title</h3>
-          <p class="tile__text">One sentence on what it is and what you did.</p>
-          <p class="tile__year">2023</p>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         EVENTS (space for the events you've organised)
+         ================================================== -->
+    <section id="events" class="section">
+      <h2 class="hand-title hand-title--big">events</h2>
+
+      <!-- EDIT: a few lines on the events you organise and why you love it -->
+      <p class="section__intro">Add a few lines here about the events you've organised and what you
+         enjoy about bringing people together.</p>
+
+      <div class="work-grid">
+        <!-- EDIT each tile: event name, a sentence on what it was, the year, and a link if there is one.
+             Copy a whole tile to add more. Add photos the same way as in the Work section. -->
+        <a class="tile tile--4 tile--sky" href="#">
+          <div class="tile__media">Replace with a photo</div>
+          <h3 class="tile__title">Event name</h3>
+          <p class="tile__text">One sentence: what it was, who came, what you organised.</p>
+          <p class="tile__year">2026</p>
         </a>
 
+        <a class="tile tile--4 tile--butter" href="#">
+          <div class="tile__media">Replace with a photo</div>
+          <h3 class="tile__title">Event name</h3>
+          <p class="tile__text">One sentence: what it was, who came, what you organised.</p>
+          <p class="tile__year">2025</p>
+        </a>
+
+        <a class="tile tile--4 tile--pink" href="#">
+          <div class="tile__media">Replace with a photo</div>
+          <h3 class="tile__title">Event name</h3>
+          <p class="tile__text">One sentence: what it was, who came, what you organised.</p>
+          <p class="tile__year">2025</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         YOUTUBE
+         ================================================== -->
+    <section id="youtube" class="section">
+      <div class="cv__head">
+        <h2 class="hand-title hand-title--big">youtube</h2>
+        <!-- EDIT: your channel link -->
+        <a class="sticker sticker--butter sticker--large" href="https://www.youtube.com/@your-channel">Visit the channel</a>
+      </div>
+
+      <!-- EDIT: a line or two on what your channel is about -->
+      <p class="section__intro">Add a line or two about what your channel is about and how often you post.</p>
+
+      <div class="videos">
+        <!-- EDIT: to show a real video, replace a whole <a class="video">…</a> with:
+             <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title" loading="lazy" allowfullscreen></iframe></div>
+             VIDEO_ID is the bit after "v=" in the video's web address. -->
+        <a class="video" href="https://www.youtube.com/@your-channel">Video one</a>
+        <a class="video" href="https://www.youtube.com/@your-channel">Video two</a>
+        <a class="video" href="https://www.youtube.com/@your-channel">Video three</a>
       </div>
     </section>
 
@@ -164,28 +219,54 @@
       <div class="section">
         <div class="cv__head">
           <h2 class="hand-title hand-title--big">cv</h2>
-          <!-- EDIT: put your CV file in the same folder and name it cv.pdf -->
+          <!-- Put your CV file in the same place as index.html and name it cv.pdf -->
           <a class="sticker sticker--butter sticker--large" href="cv.pdf" download>Download CV (PDF)</a>
         </div>
 
         <div class="cv-group">
           <h3 class="cv-group__title">Experience</h3>
           <div>
-            <!-- EDIT: copy a whole cv-row block to add another job -->
+
             <div class="cv-row">
-              <p class="cv-row__when">2023 to now</p>
+              <p class="cv-row__when">Sept 2025 to now</p>
               <div>
-                <h4 class="cv-row__what">Job title, Organisation</h4>
-                <p>One or two lines on what you did and what changed because of it.</p>
+                <h4 class="cv-row__what">Senior Consultant, Business Transformation</h4>
+                <p class="cv-row__where">CrossCountry Consulting, New York</p>
+                <ul class="cv-list">
+                  <li>Lead operational and implementation strategy for a $25M enterprise technology transformation, improving scalability across workflows supporting 10,000+ users.</li>
+                  <li>Design an AI-powered commercial insights dashboard to evaluate growth opportunities, investment ROI and business development performance, contributing to $2M+ in pipeline opportunities.</li>
+                  <li>Partner with senior business and technology leaders to evaluate implementation risks, assess strategic trade-offs and optimize rollout strategies across multiple workstreams.</li>
+                  <li>Support go-to-market and business development initiatives contributing to 20+ enterprise pipeline opportunities.</li>
+                </ul>
               </div>
             </div>
+
             <div class="cv-row">
-              <p class="cv-row__when">2020 to 2023</p>
+              <p class="cv-row__when">Oct 2024 to now</p>
               <div>
-                <h4 class="cv-row__what">Job title, Organisation</h4>
-                <p>One or two lines on what you did and what changed because of it.</p>
+                <h4 class="cv-row__what">Brand Strategy &amp; Operations</h4>
+                <p class="cv-row__where">Chilled Bean Co, Remote</p>
+                <ul class="cv-list">
+                  <li>Support go-to-market strategy, customer acquisition and market analysis for an early-stage consumer brand, identifying growth opportunities and informing expansion planning.</li>
+                </ul>
               </div>
             </div>
+
+            <div class="cv-row">
+              <p class="cv-row__when">July 2022 to Aug 2025</p>
+              <div>
+                <h4 class="cv-row__what">Strategy &amp; Operations Specialist, Global Technology Client</h4>
+                <p class="cv-row__where">Accenture, Dublin</p>
+                <ul class="cv-list">
+                  <li>Led business operations for an enterprise-wide policy transformation spanning 26 product areas, coordinating 30+ stakeholders across product, engineering and business teams.</li>
+                  <li>Synthesized 400+ business and technical requirements into strategic recommendations that informed infrastructure redesign and long-term product architecture decisions.</li>
+                  <li>Built forecasting and scenario-planning models to support executive decision-making, resource allocation and investment prioritization across multiple programs.</li>
+                  <li>Designed governance and KPI frameworks and executive reporting across 6 workstreams for global infrastructure initiatives.</li>
+                  <li>Earned the Accenture Delivery Star Award for project leadership and high-impact contribution.</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -193,24 +274,43 @@
           <h3 class="cv-group__title">Education</h3>
           <div>
             <div class="cv-row">
-              <p class="cv-row__when">2016 to 2020</p>
+              <p class="cv-row__when">May 2022</p>
               <div>
-                <h4 class="cv-row__what">Degree, University</h4>
-                <p>Anything worth a line: dissertation, society, award.</p>
+                <h4 class="cv-row__what">Bachelor of Commerce, Major in Banking &amp; Finance</h4>
+                <p class="cv-row__where">University College Cork, Ireland</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="cv-group">
-          <h3 class="cv-group__title">Skills</h3>
-          <ul class="skills">
-            <li>Skill one</li>
-            <li>Skill two</li>
-            <li>Skill three</li>
-            <li>Skill four</li>
-            <li>Skill five</li>
-          </ul>
+          <h3 class="cv-group__title">Skills &amp; interests</h3>
+          <div>
+            <p class="skills-label skills-label--first">Technical</p>
+            <ul class="skills">
+              <li>Advanced Excel / Google Sheets</li>
+              <li>SQL</li>
+              <li>Salesforce</li>
+              <li>AWS Cloud</li>
+              <li>Figma</li>
+            </ul>
+
+            <p class="skills-label">Languages</p>
+            <ul class="skills">
+              <li>Spanish (Intermediate)</li>
+              <li>French (Intermediate)</li>
+              <li>Polish (Elementary)</li>
+            </ul>
+
+            <p class="skills-label">Interests</p>
+            <ul class="skills">
+              <li>Running (3 half marathons, 1 marathon)</li>
+              <li>HYROX (4 competitions)</li>
+              <li>Consumer technology</li>
+              <li>Creative strategy</li>
+              <li>Organising events</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -222,18 +322,18 @@
       <div class="section">
         <h2 class="hand-title hand-title--big">say hello</h2>
         <!-- EDIT: your email (twice: in the link and in the text) -->
-        <a class="contact__email" href="mailto:you@example.com">you@example.com</a>
+        <a class="contact__email" href="mailto:laurenomazur@gmail.com">laurenomazur@gmail.com</a>
         <div class="contact__links">
-          <!-- EDIT: your links, delete any you don't use -->
-          <a class="sticker sticker--pink" href="https://www.linkedin.com/in/your-name">LinkedIn</a>
-          <a class="sticker sticker--sky"  href="https://www.instagram.com/your-name">Instagram</a>
+          <!-- EDIT: your links -->
+          <a class="sticker sticker--pink"   href="https://www.linkedin.com/in/your-name">LinkedIn</a>
+          <a class="sticker sticker--butter" href="https://www.youtube.com/@your-channel">YouTube</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; <span id="year">2026</span> Lauren</p>
+    <p>&copy; <span id="year">2026</span> Lauren Mazur</p>
     <a href="#top">Back to top</a>
   </footer>
 
