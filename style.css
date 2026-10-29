@@ -11,14 +11,20 @@
   --butter: #FFE94D;
   --mint:   #2EC27E;
   --violet: #9B3DDB;
-  --muted:  #55536E;
+  --muted:  #4A52C9;
 
-  --font-hand: "Gochi Hand", "Comic Sans MS", cursive;
-  --font-body: "Archivo", system-ui, sans-serif;
+  --font-hand: "Space Mono", ui-monospace, Menlo, monospace;
+  --font-body: "Space Mono", ui-monospace, Menlo, monospace;
 
   --gutter: clamp(.75rem, 2.5vw, 2rem);
 
   /* The zig-zag outline used by the sticker buttons */
+  --d-oval: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2080'%20preserveAspectRatio='none'%3E%3Cg%20fill='none'%20stroke='black'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M14%2046%20C%206%2022,%2052%208,%20104%208%20C%20158%208,%20198%2022,%20192%2044%20C%20186%2066,%20140%2074,%2094%2073%20C%2046%2072,%208%2060,%2016%2034%20C%2022%2016,%2060%208,%20110%2010'%20vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");
+  --d-underline: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%2024'%20preserveAspectRatio='none'%3E%3Cg%20fill='none'%20stroke='black'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M4%2014%20C%2050%206,%2090%2018,%20130%2010%20S%20200%206,%20236%2011'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M30%2019%20C%2090%2013,%20160%2021,%20214%2015'%20vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");
+  --d-squiggle: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20180%2030'%20preserveAspectRatio='none'%3E%3Cg%20fill='none'%20stroke='black'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M3%2018%20C%2014%204,%2024%2028,%2036%2016%20S%2058%204,%2070%2016%20S%2092%2028,%20104%2016%20S%20126%204,%20138%2016%20S%20160%2026,%20177%2012'%20vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");
+  --d-arrow: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20160%2060'%20preserveAspectRatio='xMidYMid%20meet'%3E%3Cg%20fill='none'%20stroke='black'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M4%2044%20C%2034%206,%20100%202,%20142%2032'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M124%2022%20L144%2033%20L121%2044'%20vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");
+  --d-burst: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2090'%20preserveAspectRatio='none'%3E%3Cg%20fill='none'%20stroke='black'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%2020%20L-0%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M37%2020%20L28%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M62%2020%20L57%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M87%2020%20L85%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M112%2020%20L114%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M137%2020%20L142%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M162%2020%20L171%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M187%2020%20L199%204'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M16%2034%20L3%2028'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M184%2034%20L197%2028'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M16%2052%20L3%2053'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M184%2052%20L197%2053'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M16%2070%20L3%2077'%20vector-effect='non-scaling-stroke'/%3E%3Cpath%20d='M184%2070%20L197%2077'%20vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");
+
   --burst: polygon(0% 0%, 12.5% 22%, 25% 0%, 37.5% 22%, 50% 0%, 62.5% 22%, 75% 0%, 87.5% 22%, 100% 0%, 91% 25%, 100% 50%, 91% 75%, 100% 100%, 87.5% 78%, 75% 100%, 62.5% 78%, 50% 100%, 37.5% 78%, 25% 100%, 12.5% 78%, 0% 100%, 9% 75%, 0% 50%, 9% 25%);
 }
 
@@ -101,7 +107,7 @@ img { max-width: 100%; }
 .hero {
   padding: var(--gutter);
   background: var(--paper);
-  color: var(--ink);
+  color: var(--cobalt);
 }
 
 .stage {
@@ -358,8 +364,8 @@ img { max-width: 100%; }
 
 .cv-row {
   display: grid;
-  grid-template-columns: 8rem 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: .25rem;
   margin-bottom: 1.5rem;
 }
 .cv-row:last-child { margin-bottom: 0; }
@@ -466,3 +472,109 @@ a.video:hover { background: var(--butter); }
 
 .skills-label { margin: 1.25rem 0 .5rem; font-weight: 600; }
 .skills-label--first { margin-top: 0; }
+
+
+/* =========================================================
+   TYPE: Space Mono, bold lowercase headings (blue slide-deck look)
+   ========================================================= */
+body { font-size: 1rem; line-height: 1.65; }
+
+.logo, .note, .hand-title, .tile__title, .cv-group__title,
+.contents__n, .contact__email, .sticker {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hand-title, .cv-group__title, .contents__n { color: var(--cobalt); }
+.band--cobalt .hand-title { color: #fff; }
+
+.logo { font-size: 2.25rem; }
+.clock { font-size: .75rem; }
+.tag { font-size: .85rem; }
+.contact__email { font-size: clamp(1.25rem, 4.2vw, 3.5rem); }
+.contents__n { font-size: 1.5rem; }
+
+@media (min-width: 48rem) {
+  .cv-row { grid-template-columns: 10rem 1fr; gap: 1rem; }
+}
+
+/* =========================================================
+   STARS: each one a different colour
+   ========================================================= */
+.tag__star {
+  font-size: 1.5rem;
+  line-height: 1;
+  -webkit-text-stroke: 1px var(--ink);
+}
+.tag--1 .tag__star { color: var(--pink); }
+.tag--2 .tag__star { color: var(--sky); }
+.tag--3 .tag__star { color: var(--butter); }
+.tag--4 .tag__star { color: var(--mint); }
+.tag--5 .tag__star { color: var(--violet); }
+
+/* =========================================================
+   DOODLES: hand-drawn ovals, arrows, underlines and bursts.
+   They take the colour of the text they sit next to.
+   ========================================================= */
+.doodle-host { position: relative; width: fit-content; }
+.circled { position: relative; display: inline-block; }
+
+.doodle {
+  display: block;
+  pointer-events: none;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;       mask-repeat: no-repeat;
+  -webkit-mask-position: center;        mask-position: center;
+  -webkit-mask-size: 100% 100%;         mask-size: 100% 100%;
+}
+.doodle { color: var(--cobalt); }
+.band--cobalt .doodle { color: #fff; }
+
+.doodle--oval {
+  position: absolute;
+  inset: -.2em -.4em;
+  -webkit-mask-image: var(--d-oval);    mask-image: var(--d-oval);
+}
+.doodle--underline {
+  width: 100%;
+  height: max(.3em, 10px);
+  margin-top: .1em;
+  -webkit-mask-image: var(--d-underline); mask-image: var(--d-underline);
+}
+.doodle--squiggle {
+  width: 100%;
+  height: max(.4em, 12px);
+  margin-top: .05em;
+  -webkit-mask-image: var(--d-squiggle); mask-image: var(--d-squiggle);
+}
+.doodle--burst {
+  position: absolute;
+  inset: -.7em -.9em;
+  -webkit-mask-image: var(--d-burst);   mask-image: var(--d-burst);
+}
+.doodle--arrow {
+  width: 8rem;
+  height: 3rem;
+  -webkit-mask-size: contain;           mask-size: contain;
+  -webkit-mask-image: var(--d-arrow);   mask-image: var(--d-arrow);
+}
+
+/* space so doodles don't touch the text below */
+.doodle-host.hand-title { margin-bottom: 1rem; }
+.hand-title--big.doodle-host { margin-bottom: clamp(1.5rem, 3.5vw, 3rem); }
+
+/* arrow between the YouTube title and its button */
+.doodle--between { margin-bottom: 2rem; }
+
+/* hero arrow under "hi! i'm a…" (wide screens only) */
+@media (max-width: 55.99rem) {
+  .note .doodle--arrow { display: none; }
+}
+@media (min-width: 56rem) {
+  .note--left .doodle--arrow {
+    position: absolute;
+    top: 100%;
+    left: 2.5rem;
+    margin-top: .25rem;
+  }
+}

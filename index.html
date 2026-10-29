@@ -8,10 +8,10 @@
   <title>Lauren Mazur | Portfolio</title>
   <meta name="description" content="Strategy, creative work, events and CV of Lauren Mazur.">
 
-  <!-- Fonts from Google Fonts (free): Gochi Hand for the handwriting, Archivo for everything else -->
+  <!-- Fonts from Google Fonts (free): Space Mono for everything -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -27,7 +27,7 @@
 
       <!-- Top left: your name and a live date and time (script.js fills these in) -->
       <div class="stage__logo">
-        <h1 class="logo"><a href="#top">Lauren</a></h1>
+        <h1 class="logo doodle-host"><a href="#top">Lauren</a><span class="doodle doodle--squiggle" aria-hidden="true"></span></h1>
         <p class="clock" aria-hidden="true"><span id="date"></span><br><span id="time"></span></p>
       </div>
 
@@ -41,8 +41,8 @@
       </nav>
 
       <!-- The handwritten notes either side of the portrait -->
-      <p class="note note--left">hi! i'm a…</p>
-      <p class="note note--right">living and working in New York</p>
+      <p class="note note--left">hi! i'm a…<span class="doodle doodle--arrow" aria-hidden="true"></span></p>
+      <p class="note note--right">living and working in <span class="circled">New York<span class="doodle doodle--oval" aria-hidden="true"></span></span></p>
 
       <!-- The five words dotted around you. Change the text, keep the star. -->
       <ul class="tags">
@@ -72,7 +72,7 @@
 
       <div class="about__text">
 
-        <h2 class="hand-title">about me</h2>
+        <h2 class="hand-title doodle-host">about me<span class="doodle doodle--burst" aria-hidden="true"></span></h2>
         <!-- EDIT: check this reads like you -->
         <p>I'm Lauren, a strategy and operations consultant based in New York. I work with
            senior business and technology leaders on large transformation programmes, from
@@ -81,14 +81,14 @@
            Accenture in Dublin, and now work as a Senior Consultant at CrossCountry Consulting.
            Outside of work I run, compete in HYROX, film for my YouTube channel and organise events.</p>
 
-        <h2 class="hand-title">what i do</h2>
+        <h2 class="hand-title doodle-host">what i do<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
         <p>Right now I lead operational and implementation strategy for a $25M enterprise
            technology transformation, and I built an AI-powered dashboard that tracks growth
            opportunities and business development performance. I also support go-to-market
            and growth for an early-stage consumer brand, and I'm happiest where strategy meets
            something creative.</p>
 
-        <h2 class="hand-title">tools</h2>
+        <h2 class="hand-title doodle-host">tools<span class="doodle doodle--squiggle" aria-hidden="true"></span></h2>
         <ul class="tools">
           <li>Excel</li>
           <li>Google Sheets</li>
@@ -98,7 +98,7 @@
           <li>Figma</li>
         </ul>
 
-        <h2 class="hand-title">contents</h2>
+        <h2 class="hand-title doodle-host">contents<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
         <!-- These link to the sections further down the page -->
         <ol class="contents">
           <li><a href="#work"><span class="contents__n">01.</span>work</a></li>
@@ -114,7 +114,7 @@
          WORK (creative projects)
          ================================================== -->
     <section id="work" class="section">
-      <h2 class="hand-title hand-title--big">work</h2>
+      <h2 class="hand-title hand-title--big doodle-host">work<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
 
       <div class="work-grid">
 
@@ -157,7 +157,7 @@
          EVENTS (space for the events you've organised)
          ================================================== -->
     <section id="events" class="section">
-      <h2 class="hand-title hand-title--big">events</h2>
+      <h2 class="hand-title hand-title--big doodle-host">events<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
 
       <!-- EDIT: a few lines on the events you organise and why you love it -->
       <p class="section__intro">Add a few lines here about the events you've organised and what you
@@ -194,7 +194,8 @@
          ================================================== -->
     <section id="youtube" class="section">
       <div class="cv__head">
-        <h2 class="hand-title hand-title--big">youtube</h2>
+        <h2 class="hand-title hand-title--big doodle-host">youtube<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
+        <span class="doodle doodle--arrow doodle--between" aria-hidden="true"></span>
         <!-- EDIT: your channel link -->
         <a class="sticker sticker--butter sticker--large" href="https://www.youtube.com/@your-channel">Visit the channel</a>
       </div>
@@ -218,7 +219,7 @@
     <section id="cv" class="band band--tint">
       <div class="section">
         <div class="cv__head">
-          <h2 class="hand-title hand-title--big">cv</h2>
+          <h2 class="hand-title hand-title--big doodle-host">cv<span class="doodle doodle--squiggle" aria-hidden="true"></span></h2>
           <!-- Put your CV file in the same place as index.html and name it cv.pdf -->
           <a class="sticker sticker--butter sticker--large" href="cv.pdf" download>Download CV (PDF)</a>
         </div>
@@ -320,7 +321,7 @@
          ================================================== -->
     <section id="contact" class="band band--cobalt">
       <div class="section">
-        <h2 class="hand-title hand-title--big">say hello</h2>
+        <h2 class="hand-title hand-title--big doodle-host">say hello<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
         <!-- EDIT: your email (twice: in the link and in the text) -->
         <a class="contact__email" href="mailto:laurenomazur@gmail.com">laurenomazur@gmail.com</a>
         <div class="contact__links">
