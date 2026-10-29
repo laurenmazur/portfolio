@@ -736,3 +736,58 @@ body { font-size: 1rem; line-height: 1.65; }
 .journey { margin: 0 0 2.5rem; max-width: 36rem; }
 .journey svg { display: block; width: 100%; height: auto; color: var(--cobalt); }
 .journey figcaption { margin-top: .5rem; font-size: .85rem; color: var(--muted); }
+
+
+/* =========================================================
+   TYPE v3: tight grotesque, big uppercase headings
+   (Inter Tight, medium weight, very tight letter-spacing)
+   ========================================================= */
+:root {
+  --font-hand: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+}
+
+body { font-size: .95rem; line-height: 1.5; }
+
+.logo, .note, .hand-title, .tile__title, .cv-group__title, .cv2__h,
+.cv2__name, .contact__email, .sticker, .contents__n {
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.sticker { letter-spacing: -0.01em; }
+
+.hand-title, .cv2__h, .cv-group__title, .logo { text-transform: uppercase; }
+
+.logo { font-size: 1.75rem; line-height: 1; }
+.note { line-height: 1; letter-spacing: -0.04em; }
+
+.hand-title {
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: .92;
+  margin-bottom: .9rem;
+}
+.hand-title--big {
+  font-size: clamp(3.5rem, 12vw, 10rem);
+  line-height: .88;
+}
+
+.cv2__h {
+  font-size: clamp(1.75rem, 3.4vw, 3rem);
+  line-height: .95;
+  margin-bottom: .75rem;
+}
+.cv2__name { font-size: 1.25rem; }
+.tile__title { line-height: 1; }
+.contents__n { font-size: 1.25rem; }
+.contact__email { font-size: clamp(1.5rem, 5.6vw, 4.75rem); line-height: 1; }
+
+.xp__role, .company { font-weight: 600; }
+.plus { font-weight: 600; letter-spacing: .1em; }
+.plain { line-height: 1.4; }
+.xp__text { line-height: 1.8; }
+
+/* doodles scale with the bigger headings, so keep them slimmer */
+.doodle--underline { height: max(.16em, 10px); }
+.doodle--squiggle  { height: max(.26em, 12px); }
+.hand-title--oval { margin-left: .5em; }
+.hand-title--oval .doodle--oval { inset: -.3em -.5em; }
