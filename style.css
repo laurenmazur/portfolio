@@ -974,3 +974,41 @@ body { font-size: 1rem; line-height: 1.6; }
 .contact__email { font-size: clamp(1.25rem, 4vw, 3rem); }
 .contact__links { margin-top: 1.25rem; }
 .footer { padding-block: 1rem; }
+
+
+/* =========================================================
+   SEPARATE PAGES: sticky menu bar on every page except home
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid rgba(43, 53, 245, .18);
+}
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: .75rem var(--gutter);
+}
+.site-header__logo {
+  color: var(--cobalt);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-header .stage__nav { position: static; }
+
+/* the page you are on stays highlighted in the menu */
+.pill-nav__link[aria-current="page"] { background: var(--cobalt); color: #fff; }
+
+main { min-height: 55vh; }
+.band--cobalt { min-height: 50vh; }

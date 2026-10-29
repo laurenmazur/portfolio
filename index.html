@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- EDIT: the title shows in the browser tab and in Google results -->
   <title>Lauren Mazur | Portfolio</title>
   <meta name="description" content="Strategy, creative work, branding and CV of Lauren Mazur.">
 
@@ -16,29 +15,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <a class="skip" href="#work">Skip to work</a>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ==================================================
-       HERO: portrait in the middle, words and stars dotted around it
-       ================================================== -->
-  <header class="hero" id="top">
+  <main id="main">
+  <div class="hero">
     <div class="stage">
 
       <!-- Top left: your name and a live date and time (script.js fills these in) -->
       <div class="stage__logo">
-        <h1 class="logo doodle-host"><a href="#top">Lauren Mazur </a><span class="doodle doodle--squiggle" aria-hidden="true"></span></h1>
+        <h1 class="logo doodle-host"><a href="#top">Lauren</a><span class="doodle doodle--squiggle" aria-hidden="true"></span></h1>
         <!-- EDIT: your job title, so recruiters see it straight away -->
+        <p class="stage__title">Senior Consultant, Business Transformation</p>
+        <a class="sticker sticker--cobalt hero-cv" href="cv.pdf" download>Download CV</a>
         <p class="clock" aria-hidden="true"><span id="date"></span><br><span id="time"></span></p>
       </div>
 
       <!-- Top right: the pill menu (hover or tab to a link to highlight it) -->
       <nav class="stage__nav" aria-label="Main">
-        <a class="pill-nav__link" href="#work">Work</a>
-        <a class="pill-nav__link" href="#branding">Branding</a>
-        <a class="pill-nav__link" href="#youtube">YouTube</a>
-        <a class="pill-nav__link" href="#cv">CV</a>
-        <a class="pill-nav__link" href="#contact">Contact</a>
+        <a class="pill-nav__link" href="about.html">About</a>
+        <a class="pill-nav__link" href="work.html">Work</a>
+        <a class="pill-nav__link" href="branding.html">Branding</a>
+        <a class="pill-nav__link" href="youtube.html">YouTube</a>
+        <a class="pill-nav__link" href="cv.html">CV</a>
+        <a class="pill-nav__link" href="contact.html">Contact</a>
       </nav>
 
       <!-- The handwritten notes either side of the portrait -->
@@ -58,344 +58,7 @@
       <img class="stage__portrait" src="portrait-cobalt.png" width="1122" height="1402"
            alt="Line drawing portrait of Lauren, laughing">
     </div>
-  </header>
-
-  <main>
-
-    <!-- ==================================================
-         ABOUT: second drawing on the left, handwritten headings on the right
-         ================================================== -->
-    <section id="about" class="section about">
-      <figure class="about__portrait">
-        <img src="portrait-about.png" width="1122" height="1402"
-             alt="Line drawing portrait of Lauren with long hair, hoop earrings and an L necklace">
-      </figure>
-
-      <div class="about__text">
-
-        <h2 class="hand-title doodle-host">about me<span class="doodle doodle--burst" aria-hidden="true"></span></h2>
-        <!-- EDIT: check this reads like you -->
-        <p>Born in Boston, MA and raised in Scottsdale, AZ, I moved to Cork, Ireland, for school and
-           university before heading to Dublin to start my career at Accenture. Three years later,
-           I traded Dublin for New York and took a bite out of the Big Apple. I'm now a Senior
-           Consultant at CrossCountry Consulting, mostly working with asset management clients to implement
-           new technologies and platforms.</p>
-
-        <p>Outside of work, I'm usually running, working out @ The Yard Gym, hunting down an iced
-           latte, walking someone else's dog, reading, scrolling Pinterest or filming and editing
-           videos to feed my creative side. I'm a people person who thrives on being around others,
-           bringing people together and always having something on the go. Add in some stereotypical
-           eldest-daughter energy, Type A tendencies and an overambitious to-do list, and I'm pretty
-           much in my element.</p>
-
-        <figure class="journey">
-          <svg viewBox="0 0 640 260" role="img" aria-label="Hand-drawn map: Scottsdale, Arizona to Cork, then Dublin in Ireland, then New York">
-            <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 70 L26 52 C70 44, 140 46, 200 44 C214 44, 232 38, 246 48 C252 62, 244 74, 252 86 C262 100, 252 118, 240 136 C236 150, 242 170, 250 190 C244 200, 236 196, 232 182 C224 160, 206 160, 188 164 C164 170, 150 190, 138 204 C130 214, 118 206, 112 190 C104 172, 76 160, 58 140 C40 124, 22 106, 18 70 Z"/>
-              <path d="M492 96 C502 84, 522 84, 532 98 C540 112, 536 134, 526 148 C516 162, 494 166, 484 154 C474 140, 480 110, 492 96 Z"/>
-              <path d="M290 200 q10 -10 20 0 t20 0 t20 0" stroke-width="2.5"/><path d="M345 224 q10 -10 20 0 t20 0 t20 0" stroke-width="2.5"/><path d="M370 196 q10 -10 20 0 t20 0" stroke-width="2.5"/>
-              <path d="M84 150 C150 -20, 420 -20, 498 146" stroke-dasharray="1 10"/>
-              <path d="M506 146 C530 140, 534 126, 526 114" stroke-dasharray="1 10"/>
-              <path d="M520 114 C450 290, 300 280, 242 96" stroke-dasharray="1 10"/>
-              <path d="M499 131 L498 146 L486 137"/><path d="M527 129 L526 114 L539 121"/><path d="M239 111 L242 96 L253 107"/>
-            </g>
-            <circle cx="84" cy="150" r="8" fill="#FF8FD0" stroke="#17162B" stroke-width="2"/><circle cx="500" cy="152" r="8" fill="#3DC2FF" stroke="#17162B" stroke-width="2"/><circle cx="524" cy="108" r="8" fill="#FFE94D" stroke="#17162B" stroke-width="2"/><circle cx="238" cy="88" r="8" fill="#9B3DDB" stroke="#17162B" stroke-width="2"/>
-            <g fill="currentColor" font-family="Inter Tight, Helvetica, Arial, sans-serif" font-size="24" font-weight="500">
-              <text x="40" y="122">Scottsdale</text>
-              <text x="258" y="72">New York</text>
-              <text x="544" y="104">Dublin</text>
-              <text x="548" y="162">Cork</text>
-            </g>
-          </svg>
-        </figure>
-
-        <h2 class="hand-title doodle-host">what i do<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
-        <p>Right now, I lead operational and implementation strategy for a $25M enterprise
-           technology transformation. I also support go-to-market
-           and growth for an early-stage consumer brand.
-          <li>I'm happiest where strategy meets something creative.</li></p>
-
-        <h2 class="hand-title doodle-host">tools<span class="doodle doodle--squiggle" aria-hidden="true"></span></h2>
-        <ul class="tools">
-          <li>Excel</li>
-          <li>Google Sheets</li>
-          <li>SQL</li>
-          <li>Salesforce</li>
-          <li>AWS Cloud</li>
-          <li>Figma</li>
-          <li>GitHub</li>
-        </ul>
-
-        <h2 class="hand-title hand-title--oval doodle-host">contents<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
-        <!-- These link to the sections further down the page -->
-        <ol class="contents">
-          <li><a href="#work"><span class="contents__n">01.</span>work</a></li>
-          <li><a href="#branding"><span class="contents__n">02.</span>branding</a></li>
-          <li><a href="#youtube"><span class="contents__n">03.</span>youtube</a></li>
-          <li><a href="#cv"><span class="contents__n">04.</span>cv</a></li>
-          <li><a href="#contact"><span class="contents__n">05.</span>say hi!</a></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ==================================================
-         WORK (creative projects)
-         ================================================== -->
-    <section id="work" class="section">
-      <h2 class="hand-title hand-title--big doodle-host">work<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
-
-      <div class="work-grid">
-
-        <!-- EDIT each tile: title, description, year, and the link (href).
-             To add an image: delete the <div class="tile__media">…</div> block and put
-             <div class="tile__media"><img src="your-file.jpg" alt="Describe the image"></div>
-             in its place. Upload the image file next to index.html. -->
-        <a id="project-1" class="tile tile--7 tile--butter" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Project title</h3>
-          <p class="tile__text">One sentence on what it is and what you did.</p>
-          <p class="tile__year">2025</p>
-        </a>
-
-        <a id="project-2" class="tile tile--5 tile--cobalt" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Project title</h3>
-          <p class="tile__text">One sentence on what it is and what you did.</p>
-          <p class="tile__year">2025</p>
-        </a>
-
-        <a id="project-3" class="tile tile--5 tile--mint" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Project title</h3>
-          <p class="tile__text">One sentence on what it is and what you did.</p>
-          <p class="tile__year">2024</p>
-        </a>
-
-        <a id="project-4" class="tile tile--7 tile--pink" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Project title</h3>
-          <p class="tile__text">One sentence on what it is and what you did.</p>
-          <p class="tile__year">2024</p>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- ==================================================
-         BRANDING (space for your branding projects)
-         ================================================== -->
-    <section id="branding" class="section">
-      <h2 class="hand-title hand-title--big hand-title--oval doodle-host">branding<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
-
-      <!-- EDIT: a few lines on your branding work -->
-      <p class="section__intro">Add a few lines here about your branding work: the brands you've
-         worked with and what you did for them.</p>
-
-      <div class="work-grid">
-        <!-- EDIT each tile: brand name, a sentence on what you did, the year, and a link if there is one.
-             Copy a whole tile to add more. Add photos the same way as in the Work section. -->
-        <a class="tile tile--4 tile--sky" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Brand name</h3>
-          <p class="tile__text">One sentence on the brand and what you did for it.</p>
-          <p class="tile__year">2026</p>
-        </a>
-
-        <a class="tile tile--4 tile--butter" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Brand name</h3>
-          <p class="tile__text">One sentence on the brand and what you did for it.</p>
-          <p class="tile__year">2025</p>
-        </a>
-
-        <a class="tile tile--4 tile--pink" href="#">
-          <div class="tile__media">Replace with an image</div>
-          <h3 class="tile__title">Brand name</h3>
-          <p class="tile__text">One sentence on the brand and what you did for it.</p>
-          <p class="tile__year">2025</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ==================================================
-         YOUTUBE
-         ================================================== -->
-    <section id="youtube" class="section">
-      <div class="cv__head">
-        <h2 class="hand-title hand-title--big doodle-host">youtube<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
-        <span class="doodle doodle--arrow doodle--between" aria-hidden="true"></span>
-        <!-- EDIT: your channel link -->
-        <a class="sticker sticker--butter sticker--large" href="https://www.youtube.com/@laurenmzr">Visit the channel</a>
-      </div>
-
-      <!-- EDIT: a line or two on what your channel is about -->
-      <p class="section__intro">I film and edit videos to feed my creative side. Here's the latest.</p>
-
-      <!-- Shows your latest uploads in one player (it lets viewers skip through your videos).
-           To show one specific video instead, use:
-           src="https://www.youtube.com/embed/VIDEO_ID"
-           where VIDEO_ID is the bit after "v=" in the video's web address. -->
-      <div class="videos videos--single">
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/videoseries?list=UUQfGIuvLhqQfSs390sJ_-EA"
-                  title="Lauren Mazur on YouTube" loading="lazy"
-                  allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen></iframe>
-        </div>
-      </div>
-      <p class="video-fallback">Video not showing? <a href="https://www.youtube.com/@laurenmzr">Watch on YouTube</a>.</p>
-    </section>
-
-    <!-- ==================================================
-         CV
-         ================================================== -->
-    <section id="cv" class="band band--tint">
-      <div class="section">
-        <div class="cv__head">
-          <h2 class="hand-title hand-title--big doodle-host">cv<span class="doodle doodle--squiggle" aria-hidden="true"></span></h2>
-          <!-- Put your CV file in the same place as index.html and name it cv.pdf -->
-          <a class="sticker sticker--butter sticker--large" href="cv.pdf" download>Download CV (PDF)</a>
-        </div>
-
-        <div class="cv2">
-
-          <!-- Top: name and role on the left, a small framed photo on the right -->
-          <div class="cv2__top">
-            <div>
-              <p class="cv2__name">Lauren Mazur</p>
-              <p class="cv2__role">Senior Consultant, Business Transformation</p>
-            </div>
-            <figure class="cv2__photo">
-              <div class="cv2__frame">
-                <img src="photo-lauren.jpg" width="900" height="881" alt="Photo of Lauren smiling">
-              </div>
-              <span class="doodle doodle--squiggle" aria-hidden="true"></span>
-            </figure>
-          </div>
-
-          <div class="cv2__cols">
-
-            <!-- LEFT column -->
-            <div class="cv2__left">
-              <div>
-                <h3 class="cv2__h">about me</h3>
-                <p>Strategy and operations consultant by day, creative project enthusiast by night.
-                   I work with asset management clients to bring new technologies and platforms to life.
-                   Based in NYC, with a soft spot for consumer brands, creative strategy and turning
-                   ideas into action.</p>
-              </div>
-
-              <div>
-                <h3 class="cv2__h">things i'm good at</h3>
-                <ul class="plain good">
-                  <li>Making complex things make sense</li>
-                  <li>Strategy &amp; getting things done</li>
-                  <li>Bringing people and ideas together</li>
-                  <li>Turning data into decisions</li>
-                  <li>Building things from the ground up</li>
-                  <li>Organising (it's the eldest daughter in me)</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="cv2__h">tools of the trade</h3>
-                <p>Excel &amp; Google Sheets · SQL · Salesforce · AWS Cloud · Figma · GitHub</p>
-              </div>
-
-              <div>
-                <h3 class="cv2__h">languages</h3>
-                <p>Spanish · French · Polish</p>
-                <p class="cv2__note">Still working on all three.</p>
-              </div>
-
-              <div>
-                <h3 class="cv2__h">outside of work</h3>
-                <ul class="plain">
-                  <li>Running (3 half marathons, 1 marathon)</li>
-                  <li>Next up: Philadelphia Marathon (Nov 2026), NYC Marathon (Nov 2027 and Nov 2028)</li>
-                  <li>HYROX (4 competitions), including Valencia and Málaga in doubles (March 2024)</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="cv2__h">contact</h3>
-                <p class="cv2__contact">New York, NY<br>
-                  <a href="mailto:laurenomazur@gmail.com">laurenomazur@gmail.com</a></p>
-              </div>
-            </div>
-
-            <!-- RIGHT column: the work stuff and the academic stuff.
-                 To swap a company name for its logo, see the note in style.css ("LOGO DOODLES"). -->
-            <div class="cv2__right">
-              <div>
-                <h3 class="cv2__h">the work stuff</h3>
-
-                <article class="xp">
-                  <h4 class="xp__role">Senior Consultant, Business Transformation</h4>
-                  <p class="xp__where"><span class="company">CrossCountry Consulting<span class="doodle doodle--oval" aria-hidden="true"></span></span> · Sept 2025–Present</p>
-                  <p class="xp__text">Helping asset management clients navigate the world of enterprise technology and transformation.</p>
-                  <ul class="cv-list">
-                    <li>Working on a <span class="circled">$25M<span class="doodle doodle--oval" aria-hidden="true"></span></span> technology transformation supporting 10,000+ users.</li>
-                    <li>Building an AI-powered insights dashboard to identify growth opportunities and track commercial performance.</li>
-                    <li>Supporting business development and helping turn ideas into new opportunities.</li>
-                  </ul>
-                </article>
-
-                <article class="xp">
-                  <h4 class="xp__role">Brand Strategy &amp; Operations</h4>
-                  <p class="xp__where"><span class="company">Chilled Bean Co<span class="doodle doodle--underline" aria-hidden="true"></span></span> · Oct 2024–Present</p>
-                  <p class="xp__text">A creative side project bringing together my love of consumer brands, coffee and building things.</p>
-                  <ul class="cv-list">
-                    <li>Working on go-to-market strategy, customer acquisition and market analysis.</li>
-                    <li>Exploring ways to grow the brand, connect with customers and bring new ideas to life.</li>
-                  </ul>
-                </article>
-
-                <article class="xp">
-                  <h4 class="xp__role">Strategy &amp; Operations Specialist</h4>
-                  <p class="xp__where"><span class="company">Accenture<span class="doodle doodle--burst" aria-hidden="true"></span></span> · Dublin · Jul 2022–Aug 2025</p>
-                  <p class="xp__text">Three years working at the intersection of business, technology and operations for a global technology client.</p>
-                  <ul class="cv-list">
-                    <li>Helped lead a policy transformation spanning 26 product areas and 30+ stakeholders.</li>
-                    <li>Turned <span class="circled">400+<span class="doodle doodle--oval" aria-hidden="true"></span></span> business and technical requirements into recommendations for infrastructure redesign.</li>
-                    <li>Built reporting, forecasting and governance frameworks to help teams make better decisions.</li>
-                  </ul>
-                  <p class="xp__text xp__extra"><strong>A little extra:</strong> Community Lead for Accenture's graduate programme,
-                    helping welcome 60+ new graduates each year through orientation, events and integration.
-                    Basically, making sure everyone felt at home while putting my love of organising things to good use.</p>
-                  <p class="xp__award"><span class="award__star" aria-hidden="true">★</span> Accenture Delivery Star Award</p>
-                </article>
-              </div>
-
-              <div>
-                <h3 class="cv2__h">the academic stuff</h3>
-                <article class="xp">
-                  <h4 class="xp__role">Bachelor of Commerce · Banking &amp; Finance</h4>
-                  <p class="xp__where"><span class="company">University College Cork<span class="doodle doodle--squiggle" aria-hidden="true"></span></span> · May 2022</p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================================================
-         CONTACT
-         ================================================== -->
-    <section id="contact" class="band band--cobalt">
-      <div class="section">
-        <h2 class="hand-title hand-title--big hand-title--oval doodle-host">say hi!<span class="doodle doodle--oval" aria-hidden="true"></span></h2>
-        <!-- EDIT: your email (twice: in the link and in the text) -->
-        <a class="contact__email" href="mailto:laurenomazur@gmail.com">laurenomazur@gmail.com</a>
-        <div class="contact__links">
-          <!-- EDIT: your links -->
-          <a class="sticker sticker--pink"   href="https://www.linkedin.com/in/your-name">LinkedIn</a>
-          <a class="sticker sticker--butter" href="https://www.youtube.com/@laurenmzr">YouTube</a>
-        </div>
-      </div>
-    </section>
+  </div>
   </main>
 
   <footer class="footer">

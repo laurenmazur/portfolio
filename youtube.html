@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YouTube | Lauren Mazur</title>
+  <meta name="description" content="Videos from the Lauren Mazur YouTube channel.">
+
+  <!-- Fonts from Google Fonts (free): Inter Tight for everything -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Menu: the current page is highlighted. To change the menu, edit it on every page. -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Lauren</a>
+      <nav class="stage__nav" aria-label="Main">
+        <a class="pill-nav__link" href="about.html">About</a>
+        <a class="pill-nav__link" href="work.html">Work</a>
+        <a class="pill-nav__link" href="branding.html">Branding</a>
+        <a class="pill-nav__link" href="youtube.html" aria-current="page">YouTube</a>
+        <a class="pill-nav__link" href="cv.html">CV</a>
+        <a class="pill-nav__link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="youtube" class="section">
+      <div class="cv__head">
+        <h1 class="hand-title hand-title--big doodle-host">youtube<span class="doodle doodle--underline" aria-hidden="true"></span></h1>
+        <span class="doodle doodle--arrow doodle--between" aria-hidden="true"></span>
+        <!-- EDIT: your channel link -->
+        <a class="sticker sticker--butter sticker--large" href="https://www.youtube.com/@laurenmzr">Visit the channel</a>
+      </div>
+
+      <!-- EDIT: a line or two on what your channel is about -->
+      <p class="section__intro">I film and edit videos to feed my creative side. Here's the latest.</p>
+
+      <!-- Shows your latest uploads in one player (it lets viewers skip through your videos).
+           To show one specific video instead, use:
+           src="https://www.youtube.com/embed/VIDEO_ID"
+           where VIDEO_ID is the bit after "v=" in the video's web address. -->
+      <div class="videos videos--single">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UUQfGIuvLhqQfSs390sJ_-EA"
+                  title="Lauren Mazur on YouTube" loading="lazy"
+                  allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+      <p class="video-fallback">Video not showing? <a href="https://www.youtube.com/@laurenmzr">Watch on YouTube</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Lauren Mazur</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
