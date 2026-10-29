@@ -197,19 +197,23 @@
         <h2 class="hand-title hand-title--big doodle-host">youtube<span class="doodle doodle--underline" aria-hidden="true"></span></h2>
         <span class="doodle doodle--arrow doodle--between" aria-hidden="true"></span>
         <!-- EDIT: your channel link -->
-        <a class="sticker sticker--butter sticker--large" href="https://www.youtube.com/@your-channel">Visit the channel</a>
+        <a class="sticker sticker--butter sticker--large" href="https://www.youtube.com/@laurenmzr">Visit the channel</a>
       </div>
 
       <!-- EDIT: a line or two on what your channel is about -->
       <p class="section__intro">Add a line or two about what your channel is about and how often you post.</p>
 
-      <div class="videos">
-        <!-- EDIT: to show a real video, replace a whole <a class="video">…</a> with:
-             <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title" loading="lazy" allowfullscreen></iframe></div>
-             VIDEO_ID is the bit after "v=" in the video's web address. -->
-        <a class="video" href="https://www.youtube.com/@your-channel">Video one</a>
-        <a class="video" href="https://www.youtube.com/@your-channel">Video two</a>
-        <a class="video" href="https://www.youtube.com/@your-channel">Video three</a>
+      <!-- Shows your latest uploads in one player (it lets viewers skip through your videos).
+           To show one specific video instead, use:
+           src="https://www.youtube.com/embed/VIDEO_ID"
+           where VIDEO_ID is the bit after "v=" in the video's web address. -->
+      <div class="videos videos--single">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/videoseries?list=UUQfGIuvLhqQfSs390sJ_-EA"
+                  title="Lauren Mazur on YouTube" loading="lazy"
+                  allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
+                  allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
@@ -224,93 +228,119 @@
           <a class="sticker sticker--butter sticker--large" href="cv.pdf" download>Download CV (PDF)</a>
         </div>
 
-        <div class="cv-group">
-          <h3 class="cv-group__title">Experience</h3>
-          <div>
+        <div class="cv2">
 
-            <div class="cv-row">
-              <p class="cv-row__when">Sept 2025 to now</p>
-              <div>
-                <h4 class="cv-row__what">Senior Consultant, Business Transformation</h4>
-                <p class="cv-row__where">CrossCountry Consulting, New York</p>
-                <ul class="cv-list">
-                  <li>Lead operational and implementation strategy for a $25M enterprise technology transformation, improving scalability across workflows supporting 10,000+ users.</li>
-                  <li>Design an AI-powered commercial insights dashboard to evaluate growth opportunities, investment ROI and business development performance, contributing to $2M+ in pipeline opportunities.</li>
-                  <li>Partner with senior business and technology leaders to evaluate implementation risks, assess strategic trade-offs and optimize rollout strategies across multiple workstreams.</li>
-                  <li>Support go-to-market and business development initiatives contributing to 20+ enterprise pipeline opportunities.</li>
-                </ul>
-              </div>
+          <!-- Top: name and role on the left, a small framed portrait on the right -->
+          <div class="cv2__top">
+            <div>
+              <p class="cv2__name">Lauren Mazur</p>
+              <p class="cv2__role">Senior Consultant, Business Transformation</p>
             </div>
-
-            <div class="cv-row">
-              <p class="cv-row__when">Oct 2024 to now</p>
-              <div>
-                <h4 class="cv-row__what">Brand Strategy &amp; Operations</h4>
-                <p class="cv-row__where">Chilled Bean Co, Remote</p>
-                <ul class="cv-list">
-                  <li>Support go-to-market strategy, customer acquisition and market analysis for an early-stage consumer brand, identifying growth opportunities and informing expansion planning.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="cv-row">
-              <p class="cv-row__when">July 2022 to Aug 2025</p>
-              <div>
-                <h4 class="cv-row__what">Strategy &amp; Operations Specialist, Global Technology Client</h4>
-                <p class="cv-row__where">Accenture, Dublin</p>
-                <ul class="cv-list">
-                  <li>Led business operations for an enterprise-wide policy transformation spanning 26 product areas, coordinating 30+ stakeholders across product, engineering and business teams.</li>
-                  <li>Synthesized 400+ business and technical requirements into strategic recommendations that informed infrastructure redesign and long-term product architecture decisions.</li>
-                  <li>Built forecasting and scenario-planning models to support executive decision-making, resource allocation and investment prioritization across multiple programs.</li>
-                  <li>Designed governance and KPI frameworks and executive reporting across 6 workstreams for global infrastructure initiatives.</li>
-                  <li>Earned the Accenture Delivery Star Award for project leadership and high-impact contribution.</li>
-                </ul>
-              </div>
-            </div>
-
+            <img class="cv2__photo" src="portrait-cobalt.png" width="1122" height="1402"
+                 alt="Line drawing portrait of Lauren">
           </div>
-        </div>
 
-        <div class="cv-group">
-          <h3 class="cv-group__title">Education</h3>
-          <div>
-            <div class="cv-row">
-              <p class="cv-row__when">May 2022</p>
+          <div class="cv2__cols">
+
+            <!-- LEFT column: the quick facts -->
+            <div class="cv2__left">
               <div>
-                <h4 class="cv-row__what">Bachelor of Commerce, Major in Banking &amp; Finance</h4>
-                <p class="cv-row__where">University College Cork, Ireland</p>
+                <h3 class="cv2__h">about me</h3>
+                <p>Strategy and operations consultant working with senior business and technology
+                   leaders on large transformation programmes. Based in New York, with a soft spot
+                   for consumer brands and creative strategy.</p>
+              </div>
+
+              <div>
+                <h3 class="cv2__h">skills</h3>
+                <ul class="plain">
+                  <li>Enterprise transformation</li>
+                  <li>Operational &amp; implementation strategy</li>
+                  <li>Go-to-market &amp; business development</li>
+                  <li>Executive reporting &amp; forecasting</li>
+                  <li>Governance &amp; KPI frameworks</li>
+                  <li>Stakeholder management</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="cv2__h">software i use</h3>
+                <ul class="plain">
+                  <li>Excel / Google Sheets</li>
+                  <li>SQL</li>
+                  <li>Salesforce</li>
+                  <li>AWS Cloud</li>
+                  <li>Figma</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="cv2__h">languages</h3>
+                <ul class="plain langs">
+                  <li><span>Spanish</span><span class="plus" aria-label="Intermediate">+++</span></li>
+                  <li><span>French</span><span class="plus" aria-label="Intermediate">+++</span></li>
+                  <li><span>Polish</span><span class="plus" aria-label="Elementary">+</span></li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="cv2__h">outside of work</h3>
+                <ul class="plain">
+                  <li>Running (3 half marathons, 1 marathon)</li>
+                  <li>HYROX (4 competitions)</li>
+                  <li>Consumer technology</li>
+                  <li>Organising events</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="cv2__h">contact</h3>
+                <p class="cv2__contact">New York, NY<br>
+                  <a href="mailto:laurenomazur@gmail.com">laurenomazur@gmail.com</a></p>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="cv-group">
-          <h3 class="cv-group__title">Skills &amp; interests</h3>
-          <div>
-            <p class="skills-label skills-label--first">Technical</p>
-            <ul class="skills">
-              <li>Advanced Excel / Google Sheets</li>
-              <li>SQL</li>
-              <li>Salesforce</li>
-              <li>AWS Cloud</li>
-              <li>Figma</li>
-            </ul>
+            <!-- RIGHT column: experience and education, right-aligned.
+                 To swap a company name for its logo, see the note in style.css ("LOGO DOODLES"). -->
+            <div class="cv2__right">
+              <div>
+                <h3 class="cv2__h">my experience</h3>
 
-            <p class="skills-label">Languages</p>
-            <ul class="skills">
-              <li>Spanish (Intermediate)</li>
-              <li>French (Intermediate)</li>
-              <li>Polish (Elementary)</li>
-            </ul>
+                <article class="xp">
+                  <h4 class="xp__role">Senior Consultant, Business Transformation</h4>
+                  <p class="xp__where"><span class="company">CrossCountry Consulting<span class="doodle doodle--oval" aria-hidden="true"></span></span> | Sept 2025 – Present</p>
+                  <p class="xp__text">Leading operational and implementation strategy for a
+                    <span class="circled">$25M<span class="doodle doodle--oval" aria-hidden="true"></span></span>
+                    technology transformation, and building an AI-powered insights dashboard that
+                    contributed to $2M+ in pipeline.</p>
+                </article>
 
-            <p class="skills-label">Interests</p>
-            <ul class="skills">
-              <li>Running (3 half marathons, 1 marathon)</li>
-              <li>HYROX (4 competitions)</li>
-              <li>Consumer technology</li>
-              <li>Creative strategy</li>
-              <li>Organising events</li>
-            </ul>
+                <article class="xp">
+                  <h4 class="xp__role">Brand Strategy &amp; Operations</h4>
+                  <p class="xp__where"><span class="company">Chilled Bean Co<span class="doodle doodle--underline" aria-hidden="true"></span></span> | Oct 2024 – Present</p>
+                  <p class="xp__text">Go-to-market, customer acquisition and market analysis for an
+                    early-stage consumer brand.</p>
+                </article>
+
+                <article class="xp">
+                  <h4 class="xp__role">Strategy &amp; Operations Specialist</h4>
+                  <p class="xp__where"><span class="company">Accenture<span class="doodle doodle--burst" aria-hidden="true"></span></span> | July 2022 – Aug 2025</p>
+                  <p class="xp__text">Led operations for a policy transformation across 26 product areas
+                    and 30+ stakeholders, and turned
+                    <span class="circled">400+<span class="doodle doodle--oval" aria-hidden="true"></span></span>
+                    requirements into recommendations for an infrastructure redesign.</p>
+                  <p class="xp__award"><span class="award__star" aria-hidden="true">★</span> Delivery Star Award</p>
+                </article>
+              </div>
+
+              <div>
+                <h3 class="cv2__h">education</h3>
+                <article class="xp">
+                  <h4 class="xp__role">Bachelor of Commerce, Banking &amp; Finance</h4>
+                  <p class="xp__where"><span class="company">University College Cork<span class="doodle doodle--squiggle" aria-hidden="true"></span></span> | May 2022</p>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -327,7 +357,7 @@
         <div class="contact__links">
           <!-- EDIT: your links -->
           <a class="sticker sticker--pink"   href="https://www.linkedin.com/in/your-name">LinkedIn</a>
-          <a class="sticker sticker--butter" href="https://www.youtube.com/@your-channel">YouTube</a>
+          <a class="sticker sticker--butter" href="https://www.youtube.com/@laurenmzr">YouTube</a>
         </div>
       </div>
     </section>

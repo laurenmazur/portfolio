@@ -578,3 +578,108 @@ body { font-size: 1rem; line-height: 1.65; }
     margin-top: .25rem;
   }
 }
+
+
+/* =========================================================
+   CV OVERVIEW (two columns, like a one-page CV)
+   ========================================================= */
+.cv2 { display: grid; gap: 3rem; margin-top: 1rem; }
+
+.cv2__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.cv2__name { margin: 0 0 .25rem; font-size: 1.25rem; font-weight: 700; color: var(--cobalt); }
+.cv2__role { margin: 0; }
+
+.cv2__photo {
+  width: clamp(6rem, 14vw, 10rem);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 18%;
+  border: 2px solid var(--cobalt);
+  background: #fff;
+}
+
+.cv2__cols { display: grid; gap: 3rem; }
+.cv2__left, .cv2__right { display: grid; gap: 2.75rem; align-content: start; }
+
+.cv2__h {
+  margin: 0 0 .5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--cobalt);
+}
+.cv2 p { margin: 0; }
+
+.plain { margin: 0; padding: 0; list-style: none; }
+.langs li { display: flex; gap: 1.25rem; }
+.plus { color: var(--cobalt); font-weight: 700; letter-spacing: .12em; }
+.cv2__contact { line-height: 1.7; }
+
+.xp { margin-bottom: 2rem; }
+.xp:last-child { margin-bottom: 0; }
+.xp__role { margin: 0; font-size: 1.0625rem; font-weight: 700; }
+.xp__where { margin: .4rem 0 .6rem; line-height: 2.1; color: var(--muted); }
+.xp__text { max-width: 30rem; }
+.xp__award { margin-top: .5rem; font-weight: 700; }
+
+.award__star {
+  color: var(--butter);
+  font-size: 1.25rem;
+  -webkit-text-stroke: 1px var(--ink);
+}
+
+/* company names get a doodle around or under them */
+.company {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--cobalt);
+}
+.company .doodle--underline,
+.company .doodle--squiggle {
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  height: .55em;
+  margin: 0;
+}
+.company .doodle--burst { inset: -.5em -.7em; }
+
+@media (min-width: 56rem) {
+  .cv2__cols { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .cv2__right {
+    text-align: right;
+    justify-items: end;
+    padding-top: clamp(4rem, 12vw, 9rem);
+  }
+  .xp__text { margin-left: auto; }
+}
+
+/* =========================================================
+   LOGO DOODLES (optional)
+   To use a company's real logo instead of its name, upload the logo as a
+   PNG or SVG with a transparent background, then replace the
+   <span class="company">…</span> with:
+     <span class="logo-doodle" style="--logo:url('logo-accenture.png')" role="img" aria-label="Accenture"></span>
+   The logo is redrawn as a single flat cobalt shape.
+   ========================================================= */
+.logo-doodle {
+  display: inline-block;
+  width: 7rem;
+  height: 2rem;
+  vertical-align: middle;
+  background-color: var(--cobalt);
+  -webkit-mask: var(--logo) right center / contain no-repeat;
+          mask: var(--logo) right center / contain no-repeat;
+}
+@media (max-width: 55.99rem) {
+  .logo-doodle { -webkit-mask-position: left center; mask-position: left center; }
+}
+
+
+/* one big YouTube player */
+.videos--single { grid-template-columns: 1fr; max-width: 56rem; }
