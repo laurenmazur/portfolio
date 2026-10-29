@@ -8,75 +8,146 @@
   <title>Lauren | Portfolio</title>
   <meta name="description" content="Creative work and CV of Lauren.">
 
-  <!-- Fonts from Google Fonts (free). Bricolage Grotesque for headings, Newsreader for text. -->
+  <!-- Fonts from Google Fonts (free): Gochi Hand for the handwriting, Archivo for everything else -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Gochi+Hand&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body id="top">
+<body>
   <a class="skip" href="#work">Skip to work</a>
 
-  <!-- ========== HERO ========== -->
-  <header class="hero">
-    <nav class="hero__nav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- ==================================================
+       HERO: cobalt frame, portrait in the middle,
+       words and stars dotted around it
+       ================================================== -->
+  <header class="hero" id="top">
+    <div class="stage">
 
-    <!-- EDIT: your name. If it is long, lower the 21vw in style.css (.hero__name font-size) -->
-    <h1 class="hero__name" id="name">Lauren</h1>
+      <!-- Top left: your name and a live date and time (script.js fills these in) -->
+      <div class="stage__logo">
+        <!-- EDIT: your name -->
+        <h1 class="logo"><a href="#top">Lauren</a></h1>
+        <p class="clock" aria-hidden="true"><span id="date"></span><br><span id="time"></span></p>
+      </div>
 
-    <!-- EDIT: one or two sentences: what you make, and who for -->
-    <p class="hero__intro">
-      I make things that look good and work properly. This is a short line
-      about what you do and what you want people to hire you for.
-    </p>
+      <!-- Top right: the coloured sticker buttons -->
+      <nav class="stage__nav" aria-label="Main">
+        <a class="sticker sticker--pink"   href="#work">Work</a>
+        <a class="sticker sticker--sky"    href="#about">About</a>
+        <a class="sticker sticker--butter" href="#cv">CV</a>
+        <a class="sticker sticker--mint"   href="#contact">Contact</a>
+      </nav>
+
+      <!-- EDIT: the handwritten notes either side of the portrait -->
+      <p class="note note--left">hi! i'm a…</p>
+      <p class="note note--right">living and working in your city</p>
+
+      <!-- EDIT: the five words dotted around you. Change the text, keep the star. -->
+      <ul class="tags">
+        <li class="tag tag--1"><span>Creator</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--2"><span>Designer</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--3"><span>Illustrator</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--4"><span>Storyteller</span><span class="tag__star" aria-hidden="true">★</span></li>
+        <li class="tag tag--5"><span>Human</span><span class="tag__star" aria-hidden="true">★</span></li>
+      </ul>
+
+      <!-- Your drawing, as white lines on the cobalt -->
+      <img class="stage__portrait" src="images/portrait-white.png" width="1122" height="1402"
+           alt="Line drawing portrait of Lauren, laughing">
+    </div>
   </header>
 
   <main>
-    <!-- ========== WORK ========== -->
+
+    <!-- ==================================================
+         ABOUT: drawing on the left, handwritten headings on the right
+         ================================================== -->
+    <section id="about" class="section about">
+      <figure class="about__portrait">
+        <img src="images/portrait-black.png" width="1122" height="1402"
+             alt="Line drawing portrait of Lauren, laughing">
+      </figure>
+
+      <div class="about__text">
+
+        <h2 class="hand-title">about me</h2>
+        <!-- EDIT: a short paragraph about you -->
+        <p>I'm Lauren. Write three or four sentences here: where you studied or trained,
+           what you enjoy making, how you like to work, and what you want to do next.</p>
+
+        <h2 class="hand-title">what i do</h2>
+        <!-- EDIT: a few lines on the work you're proudest of -->
+        <p>Write a few lines about the projects, jobs or collaborations you want people
+           to notice. Keep it specific: what you made, who it was for, what happened.</p>
+
+        <h2 class="hand-title">tools</h2>
+        <!-- EDIT: the tools or software you use -->
+        <ul class="tools">
+          <li>Tool one</li>
+          <li>Tool two</li>
+          <li>Tool three</li>
+          <li>Tool four</li>
+          <li>Tool five</li>
+          <li>Tool six</li>
+        </ul>
+
+        <h2 class="hand-title">contents</h2>
+        <!-- EDIT: these link to the tiles in the Work section below.
+             Change the words to match your project titles. -->
+        <ol class="contents">
+          <li><a href="#project-1"><span class="contents__n">01.</span>project one</a></li>
+          <li><a href="#project-2"><span class="contents__n">02.</span>project two</a></li>
+          <li><a href="#project-3"><span class="contents__n">03.</span>project three</a></li>
+          <li><a href="#project-4"><span class="contents__n">04.</span>project four</a></li>
+          <li><a href="#project-5"><span class="contents__n">05.</span>project five</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         WORK
+         ================================================== -->
     <section id="work" class="section">
-      <h2 class="section__title">Work</h2>
+      <h2 class="hand-title hand-title--big">work</h2>
 
       <div class="work-grid">
 
         <!-- EDIT each tile: title, description, year, and the link (href).
              To add an image: delete the <div class="tile__media">…</div> block and put
              <div class="tile__media"><img src="images/your-file.jpg" alt="Describe the image"></div>
-             in its place. Put the image file in a folder called "images". -->
-        <a class="tile tile--7 tile--butter" href="#">
+             in its place. Put the image file in the "images" folder. -->
+        <a id="project-1" class="tile tile--7 tile--butter" href="#">
           <div class="tile__media">Replace with an image</div>
           <h3 class="tile__title">Project title</h3>
           <p class="tile__text">One sentence on what it is and what you did.</p>
           <p class="tile__year">2025</p>
         </a>
 
-        <a class="tile tile--5 tile--cobalt" href="#">
+        <a id="project-2" class="tile tile--5 tile--cobalt" href="#">
           <div class="tile__media">Replace with an image</div>
           <h3 class="tile__title">Project title</h3>
           <p class="tile__text">One sentence on what it is and what you did.</p>
           <p class="tile__year">2025</p>
         </a>
 
-        <a class="tile tile--5 tile--lilac" href="#">
+        <a id="project-3" class="tile tile--5 tile--mint" href="#">
           <div class="tile__media">Replace with an image</div>
           <h3 class="tile__title">Project title</h3>
           <p class="tile__text">One sentence on what it is and what you did.</p>
           <p class="tile__year">2024</p>
         </a>
 
-        <a class="tile tile--7 tile--pink" href="#">
+        <a id="project-4" class="tile tile--7 tile--pink" href="#">
           <div class="tile__media">Replace with an image</div>
           <h3 class="tile__title">Project title</h3>
           <p class="tile__text">One sentence on what it is and what you did.</p>
           <p class="tile__year">2024</p>
         </a>
 
-        <a class="tile tile--12 tile--lilac" href="#">
+        <a id="project-5" class="tile tile--12 tile--sky" href="#">
           <div class="tile__media tile__media--wide">Replace with an image</div>
           <h3 class="tile__title">Project title</h3>
           <p class="tile__text">One sentence on what it is and what you did.</p>
@@ -86,13 +157,15 @@
       </div>
     </section>
 
-    <!-- ========== CV ========== -->
-    <section id="cv" class="band band--white">
+    <!-- ==================================================
+         CV
+         ================================================== -->
+    <section id="cv" class="band band--tint">
       <div class="section">
         <div class="cv__head">
-          <h2 class="section__title">CV</h2>
+          <h2 class="hand-title hand-title--big">cv</h2>
           <!-- EDIT: put your CV file in the same folder and name it cv.pdf -->
-          <a class="button" href="cv.pdf" download>Download CV (PDF)</a>
+          <a class="sticker sticker--butter sticker--large" href="cv.pdf" download>Download CV (PDF)</a>
         </div>
 
         <div class="cv-group">
@@ -142,17 +215,19 @@
       </div>
     </section>
 
-    <!-- ========== CONTACT ========== -->
-    <section id="contact" class="band band--butter">
+    <!-- ==================================================
+         CONTACT
+         ================================================== -->
+    <section id="contact" class="band band--cobalt">
       <div class="section">
-        <h2 class="section__title">Say hello</h2>
+        <h2 class="hand-title hand-title--big">say hello</h2>
         <!-- EDIT: your email (twice: in the link and in the text) -->
         <a class="contact__email" href="mailto:you@example.com">you@example.com</a>
-        <ul class="contact__links">
+        <div class="contact__links">
           <!-- EDIT: your links, delete any you don't use -->
-          <li><a href="https://www.linkedin.com/in/your-name">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/your-name">Instagram</a></li>
-        </ul>
+          <a class="sticker sticker--pink" href="https://www.linkedin.com/in/your-name">LinkedIn</a>
+          <a class="sticker sticker--sky"  href="https://www.instagram.com/your-name">Instagram</a>
+        </div>
       </div>
     </section>
   </main>

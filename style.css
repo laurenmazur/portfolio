@@ -2,18 +2,23 @@
    TOKENS: change colours and fonts here and the whole site updates
    ========================================================= */
 :root {
-  --cobalt: #2B35F5;
-  --paper:  #FBFAFF;
-  --ink:    #1D1B33;
-  --butter: #FFE36E;
-  --pink:   #FF8FB1;
-  --lilac:  #E4E2FA;
-  --muted:  #5B5878;
+  --cobalt: #2B35F5;     /* the anchor colour */
+  --paper:  #FCFCFF;
+  --tint:   #EDEEFF;     /* very light cobalt, for the CV band */
+  --ink:    #17162B;
+  --pink:   #FF8FD0;
+  --sky:    #3DC2FF;
+  --butter: #FFE94D;
+  --mint:   #2EC27E;
+  --muted:  #55536E;
 
-  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
-  --font-body:    "Newsreader", Georgia, serif;
+  --font-hand: "Gochi Hand", "Comic Sans MS", cursive;
+  --font-body: "Archivo", system-ui, sans-serif;
 
-  --gutter: clamp(1rem, 3vw, 2.5rem);
+  --gutter: clamp(.75rem, 2.5vw, 2rem);
+
+  /* The zig-zag outline used by the sticker buttons */
+  --burst: polygon(0% 0%, 12.5% 22%, 25% 0%, 37.5% 22%, 50% 0%, 62.5% 22%, 75% 0%, 87.5% 22%, 100% 0%, 91% 25%, 100% 50%, 91% 75%, 100% 100%, 87.5% 78%, 75% 100%, 62.5% 78%, 50% 100%, 37.5% 78%, 25% 100%, 12.5% 78%, 0% 100%, 9% 75%, 0% 50%, 9% 25%);
 }
 
 /* =========================================================
@@ -28,15 +33,17 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  line-height: 1.55;
 }
 
 a { color: inherit; }
+img { max-width: 100%; }
 ::selection { background: var(--butter); color: var(--ink); }
 
 :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
-.hero :focus-visible { outline-color: var(--butter); }
+.hero :focus-visible,
+.band--cobalt :focus-visible { outline-color: var(--butter); }
 
 .skip { position: absolute; left: -999px; }
 .skip:focus {
@@ -45,46 +52,148 @@ a { color: inherit; }
 }
 
 /* =========================================================
-   HERO: the one memorable thing. The name changes weight and
-   width as you move the mouse (see script.js).
+   STICKER BUTTONS (zig-zag edge with a dark outline)
+   ========================================================= */
+.sticker {
+  --sticker: var(--pink);
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-items: center;
+  min-width: 5rem;
+  padding: .65rem 1.25rem;
+  background: var(--ink);              /* this is the outline colour */
+  clip-path: var(--burst);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: .85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform .15s;
+}
+
+.sticker::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  background: var(--sticker);
+  clip-path: var(--burst);
+}
+
+.sticker--pink   { --sticker: var(--pink); }
+.sticker--sky    { --sticker: var(--sky); }
+.sticker--butter { --sticker: var(--butter); }
+.sticker--mint   { --sticker: var(--mint); }
+.sticker--large  { font-size: 1rem; padding: .9rem 1.75rem; }
+
+.sticker:hover { transform: rotate(-4deg) scale(1.06); }
+.sticker:focus-visible {
+  outline: none;                       /* the outline would be clipped by the zig-zag shape */
+  --sticker: #fff;
+  text-decoration: underline;
+}
+
+/* =========================================================
+   HERO (mobile first: everything stacks)
    ========================================================= */
 .hero {
-  min-height: 100vh;
-  min-height: 100svh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   padding: var(--gutter);
   background: var(--cobalt);
-  color: var(--paper);
+  color: #fff;
 }
 
-.hero__nav {
+.stage {
+  position: relative;
   display: flex;
-  justify-content: flex-end;
-  gap: 1.75rem;
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 1.125rem;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-height: max(36rem, calc(100vh - 2 * var(--gutter)));
+  min-height: max(36rem, calc(100svh - 2 * var(--gutter)));
+  padding: 1.25rem 1.25rem 0;
+  border: 2px solid var(--pink);
+  overflow: hidden;
 }
 
-.hero__nav a { text-decoration: none; }
-.hero__nav a:hover { text-decoration: underline; text-underline-offset: .3em; }
-
-.hero__name {
-  align-self: center;
+.logo {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(3.5rem, 21vw, 19rem);   /* lower the 21vw if your name is long */
-  line-height: .9;
-  letter-spacing: -0.03em;
-  font-variation-settings: "opsz" 96, "wdth" var(--wdth, 100), "wght" var(--wght, 600);
+  font-family: var(--font-hand);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
 }
+.logo a { text-decoration: none; }
 
-.hero__intro {
-  max-width: 34rem;
-  margin: 0;
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
+.clock {
+  margin: .5rem 0 0;
+  font-size: .8rem;
   line-height: 1.4;
+}
+
+.stage__nav { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+.note {
+  margin: 0;
+  font-family: var(--font-hand);
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tag { display: flex; align-items: center; gap: .4rem; font-size: .95rem; }
+.tag__star { color: var(--butter); }
+
+.stage__portrait {
+  align-self: center;
+  display: block;
+  width: min(85%, 26rem);
+  height: auto;
+  margin-top: auto;
+}
+
+/* =========================================================
+   HERO (wide screens: words float around the portrait)
+   ========================================================= */
+@media (min-width: 56rem) {
+  .stage { display: block; padding: 0; }
+
+  .stage__logo { position: absolute; top: 1.25rem; left: 1.5rem; z-index: 2; }
+  .stage__nav  { position: absolute; top: 1.25rem; right: 1.5rem; z-index: 2; }
+
+  .note { position: absolute; z-index: 2; font-size: clamp(2rem, 3.4vw, 3.25rem); }
+  .note--left  { left: 4%;  top: 38%; }
+  .note--right { right: 4%; top: 36%; max-width: 17rem; text-align: right; }
+
+  .tags { display: block; }
+  .tag {
+    position: absolute;
+    flex-direction: column;
+    gap: .1rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .tag--1 { left: 21%; top: 27%; }
+  .tag--2 { left: 38%; top: 14%; }
+  .tag--3 { left: 79%; top: 23%; }
+  .tag--4 { left: 23%; top: 49%; }
+  .tag--5 { left: 78%; top: 50%; }
+
+  .stage__portrait {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: auto;
+    height: min(80%, 52rem, 62vw);
+    margin: 0;
+    transform: translateX(-50%);
+  }
 }
 
 /* =========================================================
@@ -96,21 +205,65 @@ a { color: inherit; }
   padding: clamp(3rem, 8vw, 7rem) var(--gutter);
 }
 
-.band--white  { background: #fff; }
-.band--butter { background: var(--butter); }
+.band--tint   { background: var(--tint); }
+.band--cobalt { background: var(--cobalt); color: #fff; }
 
-.section__title {
-  margin: 0 0 clamp(1.5rem, 4vw, 3rem);
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  font-variation-settings: "wdth" 85;
+.hand-title {
+  margin: 0 0 .5rem;
+  font-family: var(--font-hand);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.hand-title--big {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
 }
 
 /* =========================================================
-   WORK GRID: tiles in different sizes and colours
+   ABOUT (drawing left, text right)
+   ========================================================= */
+.about {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__portrait { margin: 0; }
+.about__portrait img { display: block; width: 100%; max-width: 30rem; height: auto; }
+
+.about__text p { margin: 0 0 2.25rem; max-width: 36rem; }
+.about__text .hand-title { margin-top: 0; }
+
+.tools {
+  columns: 3;
+  column-gap: 2rem;
+  margin: 0 0 2.25rem;
+  padding: 0;
+  list-style: none;
+  max-width: 36rem;
+}
+
+.contents {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contents a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .75rem;
+  padding-block: .2rem;
+  text-decoration: none;
+}
+.contents a:hover { text-decoration: underline; text-underline-offset: .25em; }
+.contents__n { font-family: var(--font-hand); font-size: 1.75rem; line-height: 1; }
+
+@media (min-width: 56rem) {
+  .about { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4rem; align-items: start; }
+}
+
+/* =========================================================
+   WORK GRID
    ========================================================= */
 .work-grid {
   display: grid;
@@ -119,13 +272,14 @@ a { color: inherit; }
 }
 
 .tile {
-  --tile: var(--lilac);
+  --tile: var(--butter);
   --tile-ink: var(--ink);
   grid-column: span 12;
   display: flex;
   flex-direction: column;
   gap: .5rem;
   padding: clamp(.75rem, 1.5vw, 1.25rem);
+  border: 2px solid var(--ink);
   background-color: var(--tile);
   color: var(--tile-ink);
   text-decoration: none;
@@ -133,15 +287,16 @@ a { color: inherit; }
 }
 
 .tile--butter { --tile: var(--butter); }
-.tile--cobalt { --tile: var(--cobalt); --tile-ink: var(--paper); }
-.tile--lilac  { --tile: var(--lilac); }
+.tile--cobalt { --tile: var(--cobalt); --tile-ink: #fff; }
+.tile--mint   { --tile: var(--mint); }
 .tile--pink   { --tile: var(--pink); }
+.tile--sky    { --tile: var(--sky); }
 
-/* Hover and keyboard focus: the tile turns pink */
+/* Hover and keyboard focus: the tile flips to dark */
 .tile:hover,
 .tile:focus-visible {
-  --tile: var(--pink);
-  --tile-ink: var(--ink);
+  --tile: var(--ink);
+  --tile-ink: #fff;
 }
 
 .tile__media {
@@ -150,7 +305,6 @@ a { color: inherit; }
   aspect-ratio: 4 / 3;
   margin-bottom: .5rem;
   overflow: hidden;
-  font-family: var(--font-display);
   font-weight: 500;
   /* striped placeholder, disappears once you add an <img> */
   background: repeating-linear-gradient(135deg, rgba(0,0,0,.08) 0 12px, transparent 12px 24px);
@@ -160,14 +314,13 @@ a { color: inherit; }
 
 .tile__title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;
+  font-family: var(--font-hand);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.02em;
 }
 .tile__text { margin: 0; max-width: 40rem; }
-.tile__year { margin: 0; font-family: var(--font-display); font-weight: 500; }
+.tile__year { margin: 0; font-weight: 500; }
 
 @media (min-width: 48rem) {
   .tile--7  { grid-column: span 7; }
@@ -185,19 +338,7 @@ a { color: inherit; }
   justify-content: space-between;
   gap: 1rem;
 }
-
-.button {
-  display: inline-block;
-  margin-bottom: clamp(1.5rem, 4vw, 3rem);
-  padding: .75rem 1.5rem;
-  border-radius: 999px;
-  background: var(--butter);
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-weight: 600;
-  text-decoration: none;
-}
-.button:hover { background: var(--pink); }
+.cv__head .sticker { margin-bottom: clamp(1.25rem, 3vw, 2.5rem); }
 
 .cv-group {
   display: grid;
@@ -208,9 +349,9 @@ a { color: inherit; }
 
 .cv-group__title {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.375rem;
-  font-weight: 700;
+  font-family: var(--font-hand);
+  font-size: 1.75rem;
+  font-weight: 400;
 }
 
 .cv-row {
@@ -221,8 +362,8 @@ a { color: inherit; }
 }
 .cv-row:last-child { margin-bottom: 0; }
 
-.cv-row__when { margin: 0; color: var(--muted); font-family: var(--font-display); font-weight: 500; }
-.cv-row__what { margin: 0 0 .25rem; font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; }
+.cv-row__when { margin: 0; color: var(--muted); font-weight: 500; }
+.cv-row__what { margin: 0 0 .25rem; font-size: 1.125rem; font-weight: 600; }
 .cv-row p { margin: 0; max-width: 40rem; }
 
 .skills {
@@ -234,10 +375,9 @@ a { color: inherit; }
   list-style: none;
 }
 .skills li {
-  padding: .25rem .9rem;
+  padding: .2rem .9rem;
   border: 2px solid var(--ink);
   border-radius: 999px;
-  font-family: var(--font-display);
   font-weight: 500;
 }
 
@@ -250,22 +390,17 @@ a { color: inherit; }
    ========================================================= */
 .contact__email {
   display: inline-block;
-  font-family: var(--font-display);
+  font-family: var(--font-hand);
   font-size: clamp(1.75rem, 7vw, 5rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  font-variation-settings: "wdth" 85;
+  line-height: 1.1;
   overflow-wrap: anywhere;
 }
 
 .contact__links {
   display: flex;
-  gap: 1.5rem;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
-  font-family: var(--font-display);
-  font-weight: 500;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 2rem;
 }
 
 .footer {
@@ -282,5 +417,6 @@ a { color: inherit; }
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .tile { transition: none; }
+  .tile, .sticker { transition: none; }
+  .sticker:hover { transform: none; }
 }
